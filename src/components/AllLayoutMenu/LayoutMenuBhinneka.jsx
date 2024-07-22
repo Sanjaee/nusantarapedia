@@ -16,6 +16,12 @@ const LayoutMenuBhinneka = () => {
       setActiveMenu(9);
     } else if (location.pathname.startsWith("/satwa")) {
       setActiveMenu(10);
+    } else if (location.pathname.startsWith("/gunung")) {
+      setActiveMenu(11);
+    } else if (location.pathname.startsWith("/kerajaan")) {
+      setActiveMenu(12);
+    } else if (location.pathname.startsWith("/pahlawan")) {
+      setActiveMenu(13);
     } else {
       setActiveMenu(null);
       setIsBhinnekaVisible(false);
@@ -237,7 +243,7 @@ const LayoutMenuBhinneka = () => {
               </AnimatePresence>
             </div>
 
-            {/* Sila Ke-4 */}
+            {/* satwa */}
             <div>
               <button
                 className="w-full text-left py-3 px-6 bg-[#0054A3] text-white line-clamp-1 whitespace-nowrap transition-colors"
@@ -293,6 +299,195 @@ const LayoutMenuBhinneka = () => {
                         to="/satwa-4"
                       >
                         Rafflesia Arnoldi
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* gunung */}
+            <div>
+              <button
+                className="w-full text-left py-3 px-6 bg-[#0054A3] text-white line-clamp-1 whitespace-nowrap transition-colors"
+                onClick={() => handleButtonClick(11)}
+              >
+                Gunung & Sungai
+              </button>
+              <AnimatePresence>
+                {activeMenu === 11 && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="mt-2 space-y-2 overflow-hidden"
+                  >
+                    <div className="flex flex-col bg-white">
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/gunung-1"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/gunung-1"
+                      >
+                        Gunung Lawit
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/gunung-2"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/gunung-2"
+                      >
+                        Gunung Merapi
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/gunung-3"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/gunung-3"
+                      >
+                        Sungai Kapuas
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/gunung-4"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/gunung-4"
+                      >
+                        Sungai Landak
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Kerajaan */}
+            <div>
+              <button
+                className="w-full text-left py-3 px-6 bg-[#0054A3] text-white line-clamp-1 whitespace-nowrap transition-colors"
+                onClick={() => handleButtonClick(12)}
+              >
+                Kerajaan
+              </button>
+              <AnimatePresence>
+                {activeMenu === 12 && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="mt-2 space-y-2 overflow-hidden"
+                  >
+                    <div className="flex flex-col bg-white">
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/kerajaan-1"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/kerajaan-1"
+                      >
+                        Kerajaan Luwu
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/kerajaan-2"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/kerajaan-2"
+                      >
+                        Kerajaan Samudra Pasai
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/kerajaan-3"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/kerajaan-3"
+                      >
+                        Kerajaan Singasari
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/kerajaan-4"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/kerajaan-4"
+                      >
+                        Kerajaan Ternate
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Pahlawan Nasional */}
+            <div>
+              <button
+                className="w-full text-left py-3 px-6 bg-[#0054A3] text-white line-clamp-1 whitespace-nowrap transition-colors"
+                onClick={() => handleButtonClick(13)}
+              >
+                Pahlawan Nasional
+              </button>
+              <AnimatePresence>
+                {activeMenu === 13 && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="mt-2 space-y-2 overflow-hidden"
+                  >
+                    <div className="flex flex-col bg-white">
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/pahlawan-1"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/pahlawan-1"
+                      >
+                        Jendral Sudirman
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/pahlawan-2"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/pahlawan-2"
+                      >
+                        Martha Christina Tiahahu
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/pahlawan-3"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/pahlawan-3"
+                      >
+                        Sultan Hasanuddin
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/pahlawan-4"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/pahlawan-4"
+                      >
+                        Tuanku Imam Bonjol
                       </Link>
                     </div>
                   </motion.div>

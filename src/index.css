@@ -16,6 +16,36 @@ html {
   background-image: url("/bg-1.png");
   background-size: cover;
   background-position: center;
-  height: 5000px; /* sesuai dengan tinggi gambar */
+  width: 100%; /* sesuai dengan lebar gambar */
+}
+
+.background-2 {
+  background-image: url("/bgbirusatu.png");
+  background-size: cover;
+  background-position: center;
+
+  width: 100%; /* sesuai dengan lebar gambar */
+}
+
+.background-3 {
+  background-image: url("/bgbirudua.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%; /* sesuai dengan lebar gambar */
+}
+
+.background-4 {
+  background-image: url("/bgbirusatu.png");
+  background-size: cover;
+  background-position: center;
+
+  width: 100%; /* sesuai dengan lebar gambar */
+}
+
+.background-5 {
+  background-image: url("/bgbirusatu.png");
+  background-size: cover;
+  background-position: center;
+
   width: 100%; /* sesuai dengan lebar gambar */
 }

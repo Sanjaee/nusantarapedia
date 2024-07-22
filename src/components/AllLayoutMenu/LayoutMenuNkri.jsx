@@ -10,9 +10,13 @@ const LayoutMenuNkri = () => {
   useEffect(() => {
     // Check the pathname and set the active menu based on it
     if (location.pathname.startsWith("/kuliner")) {
-      setActiveMenu(11);
-    } else if (location.pathname.startsWith("/tradisi")) {
-      setActiveMenu(12);
+      setActiveMenu(14);
+    } else if (location.pathname.startsWith("/ibukota")) {
+      setActiveMenu(15);
+    } else if (location.pathname.startsWith("/nasional")) {
+      setActiveMenu(16);
+    } else if (location.pathname.startsWith("/pulau")) {
+      setActiveMenu(17);
     } else {
       setActiveMenu(null);
       setIsNkriVisible(false);
@@ -48,12 +52,12 @@ const LayoutMenuNkri = () => {
             <div>
               <button
                 className="w-full text-left py-3 px-6 bg-[#0054A3] text-white transition-colors"
-                onClick={() => handleButtonClick(11)}
+                onClick={() => handleButtonClick(14)}
               >
                 Kuliner
               </button>
               <AnimatePresence>
-                {activeMenu === 11 && (
+                {activeMenu === 14 && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
@@ -107,16 +111,16 @@ const LayoutMenuNkri = () => {
               </AnimatePresence>
             </div>
 
-            {/* Tradisi Nias */}
+            {/* ibukota */}
             <div>
               <button
                 className="w-full text-left py-3 px-6 bg-[#0054A3] text-white line-clamp-1 whitespace-nowrap transition-colors"
-                onClick={() => handleButtonClick(12)}
+                onClick={() => handleButtonClick(15)}
               >
-                Tarian Tradisional
+                Ibu Kota Provinsi
               </button>
               <AnimatePresence>
-                {activeMenu === 12 && (
+                {activeMenu === 15 && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
@@ -126,43 +130,169 @@ const LayoutMenuNkri = () => {
                     <div className="flex flex-col bg-white">
                       <Link
                         className={`block py-2 px-4 ${
-                          location.pathname === "/tradisi-1"
+                          location.pathname === "/ibukota-1"
                             ? "bg-[#E6F7FF]"
                             : "hover:bg-[#E6F7FF]"
                         } transition-colors`}
-                        to="/tradisi-1"
+                        to="/ibukota-1"
                       >
-                        Fahombo Batu
+                        Denpasar
                       </Link>
                       <Link
                         className={`block py-2 px-4 ${
-                          location.pathname === "/tradisi-2"
+                          location.pathname === "/ibukota-2"
                             ? "bg-[#E6F7FF]"
                             : "hover:bg-[#E6F7FF]"
                         } transition-colors`}
-                        to="/tradisi-2"
+                        to="/ibukota-2"
                       >
-                        Manafo
+                        Manokwari
                       </Link>
                       <Link
                         className={`block py-2 px-4 ${
-                          location.pathname === "/tradisi-3"
+                          location.pathname === "/ibukota-3"
                             ? "bg-[#E6F7FF]"
                             : "hover:bg-[#E6F7FF]"
                         } transition-colors`}
-                        to="/tradisi-3"
+                        to="/ibukota-3"
                       >
-                        Famato Harimau
+                        Samarinda
                       </Link>
                       <Link
                         className={`block py-2 px-4 ${
-                          location.pathname === "/tradisi-4"
+                          location.pathname === "/ibukota-4"
                             ? "bg-[#E6F7FF]"
                             : "hover:bg-[#E6F7FF]"
                         } transition-colors`}
-                        to="/tradisi-4"
+                        to="/ibukota-4"
                       >
-                        Ya’ahowu Festival
+                        Semarang
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* lagu nasional */}
+            <div>
+              <button
+                className="w-full text-left py-3 px-6 bg-[#0054A3] text-white line-clamp-1 whitespace-nowrap transition-colors"
+                onClick={() => handleButtonClick(16)}
+              >
+                Lagu Nasional
+              </button>
+              <AnimatePresence>
+                {activeMenu === 16 && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="mt-2 space-y-2 overflow-hidden"
+                  >
+                    <div className="flex flex-col bg-white">
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/nasional-1"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/nasional-1"
+                      >
+                        Halo Halo Bandung
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/nasional-2"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/nasional-2"
+                      >
+                        Hari Merdeka
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/nasional-3"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/nasional-3"
+                      >
+                        Rayuan Pulau Kelapa
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/nasional-4"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/nasional-4"
+                      >
+                        Tanah Air Ku
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Pulau Terdepan & Terluar */}
+            <div>
+              <button
+                className="w-full text-left py-3 px-6 bg-[#0054A3] text-white line-clamp-1 whitespace-nowrap transition-colors"
+                onClick={() => handleButtonClick(17)}
+              >
+                Pulau Terdepan & Terluar
+              </button>
+              <AnimatePresence>
+                {activeMenu === 17 && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="mt-2 space-y-2 overflow-hidden"
+                  >
+                    <div className="flex flex-col bg-white">
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/pulau-1"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/pulau-1"
+                      >
+                        Pulau Berhala
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/pulau-2"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/pulau-2"
+                      >
+                        Pulau Miangas
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/pulau-3"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/pulau-3"
+                      >
+                        Pulau Rote
+                      </Link>
+                      <Link
+                        className={`block py-2 px-4 ${
+                          location.pathname === "/pulau-4"
+                            ? "bg-[#E6F7FF]"
+                            : "hover:bg-[#E6F7FF]"
+                        } transition-colors`}
+                        to="/pulau-4"
+                      >
+                        Pulau Weh
                       </Link>
                     </div>
                   </motion.div>

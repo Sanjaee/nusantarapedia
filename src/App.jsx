@@ -48,14 +48,38 @@ import KulinerSatu from "./pages/NkriSatu/KulinerSatu";
 import KulinerDua from "./pages/NkriSatu/KulinerDua";
 import KulinerTiga from "./pages/NkriSatu/KulinerTiga";
 import KulinerEmpat from "./pages/NkriSatu/KulinerEmpat";
-import TradisiSatu from "./pages/NkriDua/TradisiSatu";
-import TradisiDua from "./pages/NkriDua/TradisiDua";
-import TradisiTiga from "./pages/NkriDua/TradisiTiga";
-import TradisiEmpat from "./pages/NkriDua/TradisiEmpat";
 import Pancasila from "./pages/AllMainPage/Pancasila";
 import UudPage from "./pages/AllMainPage/UudPage";
 import Bhinneka from "./pages/AllMainPage/Bhinneka";
 import NkriPage from "./pages/AllMainPage/NkriPage";
+import GunungSungaiSatu from "./pages/BhinnekaLima/GunungSungaiSatu";
+import GunungSungaiDua from "./pages/BhinnekaLima/GunungSungaiDua";
+import GunungSungaiTiga from "./pages/BhinnekaLima/GunungSungaiTiga";
+import GunungSungaiEmpat from "./pages/BhinnekaLima/GunungSungaiEmpat";
+import KerajaanSatu from "./pages/BhinnekaEnam/KerajaanSatu";
+import KerajaanDua from "./pages/BhinnekaEnam/KerajaanDua";
+import KerajaanTiga from "./pages/BhinnekaEnam/KerajaanTiga";
+import KerajaanEmpat from "./pages/BhinnekaEnam/KerajaanEmpat";
+import PahlawanSatu from "./pages/BhinnekaTujuh/PahlawanSatu";
+import PahlawanDua from "./pages/BhinnekaTujuh/PahlawanDua";
+import PahlawanTiga from "./pages/BhinnekaTujuh/PahlawanTiga";
+import PahlawanEmpat from "./pages/BhinnekaTujuh/PahlawanEmpat";
+import IbukotaSatu from "./pages/NkriDua/IbukotaSatu";
+import IbukotaDua from "./pages/NkriDua/IbukotaDua";
+import IbukotaTiga from "./pages/NkriDua/IbukotaTiga";
+import IbukotaEmpat from "./pages/NkriDua/IbukotaEmpat";
+import LaguNasionalSatu from "./pages/NkriTiga/LaguNasionalSatu";
+import LaguNasionalDua from "./pages/NkriTiga/LaguNasionalDua";
+import LaguNasionalTiga from "./pages/NkriTiga/LaguNasionalTiga";
+import LaguNasionalEmpat from "./pages/NkriTiga/LaguNasionalEmpat";
+import PulauSatu from "./pages/NkriEmpat/PulauSatu";
+import PulauDua from "./pages/NkriEmpat/PulauDua";
+import PulauTiga from "./pages/NkriEmpat/PulauTiga";
+import PulauEmpat from "./pages/NkriEmpat/PulauEmpat";
+import TestimoniComponent from "./backend/action/TestimoniComponent";
+import UpdateMitraComponent from "./backend/action/UpdateMitraComponent";
+import GaleryComponent from "./backend/action/GaleryComponent";
+import Login from "./backend/Login";
 
 const App = () => {
   return (
@@ -135,6 +159,24 @@ const App = () => {
         <Route path="/satwa-3" element={<SatwaTiga />} />
         <Route path="/satwa-4" element={<SatwaEmpat />} />
 
+        {/* Bhineka 5 */}
+        <Route path="/gunung-1" element={<GunungSungaiSatu />} />
+        <Route path="/gunung-2" element={<GunungSungaiDua />} />
+        <Route path="/gunung-3" element={<GunungSungaiTiga />} />
+        <Route path="/gunung-4" element={<GunungSungaiEmpat />} />
+
+        {/* Bhineka 6 */}
+        <Route path="/Kerajaan-1" element={<KerajaanSatu />} />
+        <Route path="/Kerajaan-2" element={<KerajaanDua />} />
+        <Route path="/Kerajaan-3" element={<KerajaanTiga />} />
+        <Route path="/Kerajaan-4" element={<KerajaanEmpat />} />
+
+        {/* Bhineka 7 */}
+        <Route path="/Pahlawan-1" element={<PahlawanSatu />} />
+        <Route path="/Pahlawan-2" element={<PahlawanDua />} />
+        <Route path="/Pahlawan-3" element={<PahlawanTiga />} />
+        <Route path="/Pahlawan-4" element={<PahlawanEmpat />} />
+
         {/* NKRI 1 */}
         <Route path="/kuliner-1" element={<KulinerSatu />} />
         <Route path="/kuliner-2" element={<KulinerDua />} />
@@ -142,10 +184,28 @@ const App = () => {
         <Route path="/kuliner-4" element={<KulinerEmpat />} />
 
         {/* NKRI 2 */}
-        <Route path="/tradisi-1" element={<TradisiSatu />} />
-        <Route path="/tradisi-2" element={<TradisiDua />} />
-        <Route path="/tradisi-3" element={<TradisiTiga />} />
-        <Route path="/tradisi-4" element={<TradisiEmpat />} />
+        <Route path="/ibukota-1" element={<IbukotaSatu />} />
+        <Route path="/ibukota-2" element={<IbukotaDua />} />
+        <Route path="/ibukota-3" element={<IbukotaTiga />} />
+        <Route path="/ibukota-4" element={<IbukotaEmpat />} />
+
+        {/* NKRI 3 */}
+        <Route path="/nasional-1" element={<LaguNasionalSatu />} />
+        <Route path="/nasional-2" element={<LaguNasionalDua />} />
+        <Route path="/nasional-3" element={<LaguNasionalTiga />} />
+        <Route path="/nasional-4" element={<LaguNasionalEmpat />} />
+
+        {/* NKRI 4 */}
+        <Route path="/pulau-1" element={<PulauSatu />} />
+        <Route path="/pulau-2" element={<PulauDua/>} />
+        <Route path="/pulau-3" element={<PulauTiga/>} />
+        <Route path="/pulau-4" element={<PulauEmpat/>} />
+
+        {/* Backend */}
+        <Route path="/backend" element={<Login />} />
+        <Route path="/backend/galery" element={<GaleryComponent />} />
+        <Route path="/backend/testimoni" element={<TestimoniComponent />} />
+        <Route path="/backend/mitra" element={<UpdateMitraComponent />} />
       </Routes>
     </BrowserRouter>
   );
