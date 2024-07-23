@@ -8,7 +8,7 @@ const LayoutMenuNkri = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Check the pathname and set the active menu based on it
+   
     if (location.pathname.startsWith("/kuliner")) {
       setActiveMenu(14);
     } else if (location.pathname.startsWith("/ibukota")) {

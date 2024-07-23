@@ -11,7 +11,7 @@ const NkriPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 500); // Simulate loading
+    }, 500);
   }, []);
 
   if (loading) {

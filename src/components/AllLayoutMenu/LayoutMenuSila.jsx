@@ -8,7 +8,7 @@ const LayoutMenuSila = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Check the pathname and set the active menu based on it
+  
     if (location.pathname.startsWith("/sila-satu")) {
       setActiveMenu(0);
     } else if (location.pathname.startsWith("/sila-dua")) {
@@ -29,7 +29,6 @@ const LayoutMenuSila = () => {
     setActiveMenu(activeMenu === menuIndex ? null : menuIndex);
   };
 
-  // Sila
   const toggleSilaVisibility = () => {
     setIsSilaVisible(!isSilaVisible);
   };

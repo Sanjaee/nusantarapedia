@@ -7,7 +7,7 @@ const LayoutMenuBhinneka = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Check the pathname and set the active menu based on it
+   
     if (location.pathname.startsWith("/lagu")) {
       setActiveMenu(7);
     } else if (location.pathname.startsWith("/tarian")) {
@@ -32,7 +32,6 @@ const LayoutMenuBhinneka = () => {
     setActiveMenu(activeMenu === menuIndex ? null : menuIndex);
   };
 
-  // BHINNEKA
   const toggleBHINNEKAVisibility = () => {
     setIsBhinnekaVisible(!isBhinnekaVisible);
   };

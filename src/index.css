@@ -12,6 +12,17 @@ html {
   scroll-behavior: smooth;
 }
 
+.slick-dots li button:before {
+  margin-top: 20px;
+  font-size: 12px; /* Adjust the size of the dots */
+  color: #575757; /* Change the color of the dots */
+}
+
+/* Active dot styles */
+.slick-dots li.slick-active button:before {
+  color: #88C5FF; /* Change the color of the active dot */
+}
+
 .background-1 {
   background-image: url("/bg-1.png");
   background-size: cover;

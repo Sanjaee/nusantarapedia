@@ -7,7 +7,7 @@ import { useLogin } from "../useLogin";
 
 const API_KEY = "G8XcZJLaeJTx0jQq";
 
-// Set the default header for axios
+
 axios.defaults.headers.common["API_KEY"] = API_KEY;
 
 const TestimoniComponent = () => {
@@ -44,7 +44,7 @@ const TestimoniComponent = () => {
         image_url: form.image_url,
       });
       toast.success("Testimoni added successfully!");
-      setForm({ id: "", image_url: "" });
+      setForm({ id: "", image_url: "" }); // Clear form input
       fetchTestimonis();
     } catch (error) {
       toast.error("Error adding testimoni.");
@@ -109,6 +109,7 @@ const TestimoniComponent = () => {
                 type="text"
                 name="image_url"
                 required
+                value={form.image_url} // Bind the form value
                 onChange={handleChange}
                 placeholder="Masukkan image URL disini"
                 className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -129,19 +130,24 @@ const TestimoniComponent = () => {
             <p>No testimonis available.</p>
           ) : (
             <ul className="space-y-4">
-              {testimonis.map((testimoni) => (
+              {testimonis.map((testimoni, index) => (
                 <li
                   key={testimoni.id}
                   className="flex flex-col sm:flex-row items-center justify-between p-4 border rounded-md"
                 >
                   <div className="flex flex-col w-full">
                     <div className="flex flex-col ">
-                      <img
-                        src={testimoni.image_url}
-                        alt="Testimoni"
-                        className="w-80 border mb-2 object-cover rounded-md mr-4"
-                      />
-                      <p className="text-gray-800 lg:block hidden">{testimoni.image_url}</p>
+                      <div className="flex items-center mb-2">
+                        <span className="mr-2 font-bold">{index + 1}.</span>
+                        <img
+                          src={testimoni.image_url}
+                          alt="Testimoni"
+                          className="w-80 border object-cover rounded-md mr-4"
+                        />
+                      </div>
+                      <p className="text-gray-800 lg:block hidden">
+                        {testimoni.image_url}
+                      </p>
                     </div>
                     <div className="flex space-x-2 mt-4 ">
                       <button

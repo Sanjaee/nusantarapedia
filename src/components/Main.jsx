@@ -3,28 +3,21 @@ import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import SliderComponent from "./SliderComponent";
 import axios from "axios";
+import SliderMitra from "./SliderMitra";
 
-// Define the API key
+
 const API_KEY = "G8XcZJLaeJTx0jQq";
 
-// Set default headers for axios
+
 axios.defaults.headers.common["API_KEY"] = API_KEY;
 
 const Main = () => {
-  const [mitra, setMitra] = useState({});
   const [galeri, setGaleri] = useState([]);
 
-  // Fetch data from APIs
+ 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch mitra data
-        const mitraResponse = await axios.get(
-          "http://localhost:8000/api/mitra"
-        );
-        setMitra(mitraResponse.data);
-
-        // Fetch galeri data
         const galeriResponse = await axios.get(
           "http://localhost:8000/api/galery"
         );
@@ -140,8 +133,10 @@ const Main = () => {
         </div>
 
         <div className="mt-52 text-center custom-1200:px-20 custom-1000:px-10">
-          <h1 className=" text-[50px] font-bold text-[#0054A3] mb-10">Mitra</h1>
-          <img src={mitra.image_url} alt="Mitra" />
+          <h1 className=" text-[50px] font-bold text-[#0054A3] mb-10">
+            Mitra Kami
+          </h1>
+          <SliderMitra />
         </div>
 
         <div className="mt-52 text-center ">
@@ -179,14 +174,14 @@ const Main = () => {
         className="mt-40  items-center flex-col justify-center lg:hidden flex"
       >
         <div className="flex flex-col items-center px-5">
-        <h1 className="text-[20px] font-bold mb-10">Didukung oleh:</h1>
-        <img src="./bgmain1.png" alt="" />
+          <h1 className="text-sm font-semibold mb-10">Didukung oleh:</h1>
+          <img className="w-52" src="./bgmain1.png" alt="" />
         </div>
         {/* 1 */}
-        <div className="mt-10 flex flex-col items-center px-5">
-          <img className="w-[300px]" src="./bgmain2.png" alt="" />
+        <div className="mt-20 flex flex-col items-center px-5">
+          <img className="w-56" src="./bgmain2.png" alt="" />
           <div className="flex flex-col w-full mt-5">
-            <h1 className="text-[40px] font-bold text-[#0054A3]">Pancasila</h1>
+            <h1 className="text-[30px] font-bold text-[#0054A3]">Pancasila</h1>
             <p className="text-sm">
               Temukan makna mendalam dari setiap sila dalam Pancasila. Ayo,
               jadikan nilai-nilai luhur ini sebagai pedoman dalam kehidupan kita
@@ -203,10 +198,10 @@ const Main = () => {
           </div>
         </div>
         {/* 2 */}
-        <div  className="mt-20 flex-col flex items-center px-5">
-          <img className="w-[300px]" src="./bgmain3.png" alt="" />
+        <div className="mt-20 flex-col flex items-center px-5">
+          <img className="w-56 ml-10" src="./bgmain3.png" alt="" />
           <div className="flex flex-col w-full mt-5">
-            <h1 className="text-[30px] font-bold text-[#0054A3]">
+            <h1 className="text-[24px] font-bold text-[#0054A3]">
               Undang-Undang Dasar Negara Republik Indonesia Tahun 1945
             </h1>
             <p className="text-sm">
@@ -218,7 +213,7 @@ const Main = () => {
             <div className="mt-5 ">
               <Link
                 to="/undang-undang-dasar-1945"
-                className="px-4  shadow-lg rounded-md py-2 border border-[#696969] text-[#4796E0]"
+               className="px-4  shadow-lg rounded-md py-2 border border-[#696969] text-[#4796E0]"
               >
                 Selengkapnya &#10095;
               </Link>
@@ -227,10 +222,10 @@ const Main = () => {
         </div>
 
         {/* 3 */}
-        <div  className="mt-20 flex-col flex items-center px-5">
-          <img className="w-[300px]" src="./bgmain4.png" alt="" />
+        <div className="mt-20 flex-col flex items-center px-5">
+          <img className="w-64" src="./bgmain4.png" alt="" />
           <div className="flex flex-col w-full mt-5">
-            <h1 className="text-[40px] font-bold text-[#0054A3]">
+            <h1 className="text-[24px] font-bold text-[#0054A3]">
               Bhinneka Tunggal Ika
             </h1>
             <p className="text-sm">
@@ -251,9 +246,9 @@ const Main = () => {
         </div>
         {/* 4 */}
         <div className="mt-20 flex flex-col items-center px-5">
-          <img className="w-[300px] " src="./bgmain5.png" alt="" />
+          <img className="w-56 " src="./bgmain5.png" alt="" />
           <div className="flex flex-col  mt-5">
-            <h1 className="text-[30px] w-full font-bold text-[#0054A3]">
+            <h1 className="text-[24px] w-full font-bold text-[#0054A3]">
               Negara Kesatuan Republik Indonesia
             </h1>
             <p className="text-sm w-full">
@@ -273,27 +268,26 @@ const Main = () => {
           </div>
         </div>
 
-        <div  className="mt-40 text-center px-5">
-          <h1 className=" text-[40px] font-bold text-[#0054A3] mb-10">Mitra</h1>
-          <img src={mitra.image_url} alt="Mitra" />
+        <div className="mt-40 text-center flex flex-col justify-center items-center px-5 w-full">
+          <h1 className="text-[24px] font-bold text-[#0054A3] ">
+            Mitra Kami
+          </h1>
+          <SliderMitra />
         </div>
 
-        <div className="mt-40 text-center ">
-          <h1 className=" text-[50px] font-bold text-[#0054A3] mb-10">
+        <div className="mt-20 text-center ">
+          <h1 className=" text-[28px] font-bold text-[#0054A3] mb-10">
             Testimoni
           </h1>
           <SliderComponent />
         </div>
 
         <div id="galery1" className="mt-52 text-center px-4 bg-[#E6F7FF]">
-          <h1 className="text-[50px] font-bold text-[#0054A3]">Galeri</h1>
+          <h1 className="text-[30px] font-bold text-[#0054A3]">Galeri</h1>
           <div className="mt-10 grid grid-cols-2 gap-2">
             {/* Galeri */}
             {galeri.map((item) => (
-              <div
-                key={item.id}
-                className="w-full  bg-slate-400 "
-              >
+              <div key={item.id} className="w-full  bg-slate-400 ">
                 <img
                   className="object-cover h-full"
                   src={item.image_url}

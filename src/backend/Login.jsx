@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 
 const API_KEY = "G8XcZJLaeJTx0jQq";
 
-// Set default headers for axios
+
 axios.defaults.headers.common["API_KEY"] = API_KEY;
 
 const Login = () => {

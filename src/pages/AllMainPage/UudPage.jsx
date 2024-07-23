@@ -11,7 +11,7 @@ const UudPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 500); // Simulate loading time
+    }, 500); 
   }, []);
 
   if (loading) {

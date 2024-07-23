@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Configure axios with the API key
+
 const API_KEY = "G8XcZJLaeJTx0jQq";
 axios.defaults.headers.common["API_KEY"] = API_KEY;
 
@@ -59,7 +59,7 @@ const SliderComponent = () => {
           >
             <img
               className="object-cover object-center h-full max-h-[317px] w-full rounded-xl"
-              src={slide.image_url} // Ensure this matches the actual field name in your API response
+              src={slide.image_url} 
               alt={`Slide ${slide.id}`}
               loading="lazy"
             />
@@ -79,7 +79,7 @@ const SliderComponent = () => {
           >
             <img
               className="object-cover object-center w-full rounded-xl"
-              src={slide.image_url} // Ensure this matches the actual field name in your API response
+              src={slide.image_url}
               alt={`Slide ${slide.id}`}
               loading="lazy"
             />

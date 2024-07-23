@@ -12,14 +12,14 @@ const Navbar = () => {
     <>
       {/* Desktop */}
       <div className="lg:flex hidden bg-[#E6F7FF] px-10 h-14 custom-1200:h-20 w-full items-center justify-between top-0 z-50 fixed">
-        <div className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img src="./logonavbar.png" className="h-10" alt="logo" />
           <img
             src="./logoteksnavbar.png"
             className="h-4 ml-4  sm:block"
             alt="logoteks"
           />
-        </div>
+        </Link>
         <div></div>
         <div className="hidden sm:block">
           <ul className="flex space-x-8 text-[#696969] text-sm font-bold">
@@ -98,7 +98,7 @@ const Navbar = () => {
                   animate={{ x: 0, opacity: 1 }}
                   exit={{ x: -100, opacity: 0 }}
                   transition={{ duration: 0.1 }}
-                  className="fixed  top-0 left-0 h-full bg-[#E6F7FF] w-52 shadow-lg z-50"
+                  className="fixed  top-0 left-0 h-full bg-[#E6F7FF] w-56 shadow-lg z-50"
                 >
                   <div className="p-4">
                     <button

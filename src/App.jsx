@@ -77,9 +77,9 @@ import PulauDua from "./pages/NkriEmpat/PulauDua";
 import PulauTiga from "./pages/NkriEmpat/PulauTiga";
 import PulauEmpat from "./pages/NkriEmpat/PulauEmpat";
 import TestimoniComponent from "./backend/action/TestimoniComponent";
-import UpdateMitraComponent from "./backend/action/UpdateMitraComponent";
 import GaleryComponent from "./backend/action/GaleryComponent";
 import Login from "./backend/Login";
+import UpdateMitraComponent from "./backend/action/UpdateMitraComponent";
 
 const App = () => {
   return (

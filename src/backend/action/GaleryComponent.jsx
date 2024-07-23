@@ -7,7 +7,6 @@ import { useLogin } from "../useLogin";
 
 const API_KEY = "G8XcZJLaeJTx0jQq";
 
-// Set the default header for axios
 axios.defaults.headers.common["API_KEY"] = API_KEY;
 
 const GalleryComponent = () => {
@@ -18,7 +17,6 @@ const GalleryComponent = () => {
   const [deleteConfirmation, setDeleteConfirmation] = useState(false);
   const [selectedGalleryId, setSelectedGalleryId] = useState(null);
 
-  // Fetch gallery items
   const fetchGalleries = async () => {
     try {
       const response = await axios.get("http://localhost:8000/api/galery");
@@ -33,13 +31,11 @@ const GalleryComponent = () => {
     fetchGalleries();
   }, []);
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
-  // Handle add gallery item
   const handleAddSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -47,7 +43,7 @@ const GalleryComponent = () => {
         image_url: form.image_url,
       });
       toast.success("Gallery item added successfully!");
-      setForm({ id: "", image_url: "" });
+      setForm({ id: "", image_url: "" }); // Reset the form state
       fetchGalleries();
     } catch (error) {
       toast.error("Error adding gallery item.");
@@ -55,7 +51,6 @@ const GalleryComponent = () => {
     }
   };
 
-  // Handle edit gallery item
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -72,13 +67,11 @@ const GalleryComponent = () => {
     }
   };
 
-  // Start editing a gallery item
   const handleEdit = (gallery) => {
     setForm(gallery);
     setEditing(true);
   };
 
-  // Handle delete gallery item
   const handleDelete = async (id) => {
     try {
       await axios.delete(`http://localhost:8000/api/galery/${id}`);
@@ -91,7 +84,6 @@ const GalleryComponent = () => {
     }
   };
 
-  // Confirm deletion
   const confirmDelete = (id) => {
     setSelectedGalleryId(id);
     setDeleteConfirmation(true);
@@ -113,6 +105,7 @@ const GalleryComponent = () => {
               <input
                 type="text"
                 name="image_url"
+                value={form.image_url}
                 placeholder="Masukkan image URL disini"
                 onChange={handleChange}
                 required
@@ -134,21 +127,24 @@ const GalleryComponent = () => {
             <p>No gallery items available.</p>
           ) : (
             <ul className="space-y-4">
-              {galleries.map((gallery) => (
+              {galleries.map((gallery, index) => (
                 <li
                   key={gallery.id}
                   className="flex flex-col sm:flex-row items-center justify-between p-4 border rounded-md"
                 >
                   <div className="flex flex-col">
                     <div className="flex flex-col ">
-                      <img
-                        src={gallery.image_url}
-                        alt="Gallery"
-                        className="w-80 border mb-2 object-cover rounded-md mr-4"
-                      />
-                      <p className="text-gray-800 lg:block hidden">
-                        {gallery.image_url}
-                      </p>
+                      <div className="flex items-center mb-2">
+                        <span className="mr-2 font-bold">{index + 1}.</span>
+                        <img
+                          src={gallery.image_url}
+                          alt="Gallery"
+                          className="w-80 border mb-2 object-cover rounded-md mr-4"
+                        />
+                        <p className="text-gray-800 lg:block hidden">
+                          {gallery.image_url}
+                        </p>
+                      </div>
                     </div>
                     <div className="flex space-x-2 mt-4 ">
                       <button

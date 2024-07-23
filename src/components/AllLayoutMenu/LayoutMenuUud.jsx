@@ -10,7 +10,7 @@ const LayoutMenuUud = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Check the pathname and set the active menu based on it
+  
     if (location.pathname.startsWith("/uud")) {
       setActiveMenu(5);
     } else if (location.pathname.startsWith("/bahasa")) {
@@ -25,7 +25,7 @@ const LayoutMenuUud = () => {
     setActiveMenu(activeMenu === menuIndex ? null : menuIndex);
   };
 
-  // UUD
+
   const toggleUUDVisibility = () => {
     setIsUUDVisible(!isUUDVisible);
   };
