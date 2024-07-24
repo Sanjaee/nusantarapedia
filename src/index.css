@@ -30,6 +30,12 @@ html {
   width: 100%; /* sesuai dengan lebar gambar */
 }
 
+.background-1-mobile {
+  background-image: url("/bgmobile.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%; /* sesuai dengan lebar gambar */
+}
 .background-2 {
   background-image: url("/bgbirusatu.png");
   background-size: cover;

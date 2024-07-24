@@ -132,7 +132,7 @@ const Main = () => {
           <img className="w-[350px] " src="./bgmain5.png" alt="" />
         </div>
 
-        <div className="mt-52 text-center custom-1200:px-20 custom-1000:px-10">
+        <div className="mt-60 text-center custom-1200:px-20 custom-1000:px-10">
           <h1 className=" text-[50px] font-bold text-[#0054A3] mb-10">
             Mitra Kami
           </h1>

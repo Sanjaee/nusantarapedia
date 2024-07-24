@@ -5,11 +5,18 @@ import Header from "../components/Header";
 
 const Home = () => {
   return (
-    <div className=" background-1 flex flex-col ">
-      <Navbar />
-      <Header />
-      <Main />
-    </div>
+    <>
+      <div className="background-1  lg:flex hidden flex-col ">
+        <Navbar />
+        <Header />
+        <Main />
+      </div>
+      <div className="background-1-mobile lg:hidden flex flex-col  ">
+        <Navbar />
+        <Header />
+        <Main />
+      </div>
+    </>
   );
 };
 
