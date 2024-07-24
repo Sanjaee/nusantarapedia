@@ -1,35 +1,45 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import SliderComponent from "./SliderComponent";
-import axios from "axios";
 import SliderMitra from "./SliderMitra";
 
-
-const API_KEY = "G8XcZJLaeJTx0jQq";
-
-
-axios.defaults.headers.common["API_KEY"] = API_KEY;
+// Static gallery data
+const galleryItems = [
+  {
+    id: 1,
+    image_url:
+      "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721549773/galeri1_zvg3w4.png",
+  },
+  {
+    id: 2,
+    image_url:
+      "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721549775/galeri2_vilj28.png",
+  },
+  {
+    id: 3,
+    image_url:
+      "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721549778/galeri3_wrin3z.png",
+  },
+  {
+    id: 4,
+    image_url:
+      "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721455229/galeri4_wqz2ze.png",
+  },
+  {
+    id: 5,
+    image_url:
+      "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721549782/galeri5_rthize.png",
+  },
+  {
+    id: 6,
+    image_url:
+      "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721549784/galeri6_lemofu.png",
+  },
+  // Add more items as needed
+];
 
 const Main = () => {
-  const [galeri, setGaleri] = useState([]);
-
- 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const galeriResponse = await axios.get(
-          "http://localhost:8000/api/galery"
-        );
-        setGaleri(galeriResponse.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
   return (
     <>
       {/* Dekstop */}
@@ -150,7 +160,7 @@ const Main = () => {
           <h1 className="text-[50px] font-bold text-[#0054A3]">Galeri</h1>
           <div className="mt-10 grid grid-cols-3 gap-4 custom-1200:gap-6">
             {/* Galeri */}
-            {galeri.map((item) => (
+            {galleryItems.map((item) => (
               <div
                 key={item.id}
                 className="w-full min-w-[300px] custom-1200:min-w-[390px] bg-slate-400 h-[400px]"
@@ -213,7 +223,7 @@ const Main = () => {
             <div className="mt-5 ">
               <Link
                 to="/undang-undang-dasar-1945"
-               className="px-4  shadow-lg rounded-md py-2 border border-[#696969] text-[#4796E0]"
+                className="px-4  shadow-lg rounded-md py-2 border border-[#696969] text-[#4796E0]"
               >
                 Selengkapnya &#10095;
               </Link>
@@ -269,9 +279,7 @@ const Main = () => {
         </div>
 
         <div className="mt-40 text-center flex flex-col justify-center items-center px-5 w-full">
-          <h1 className="text-[24px] font-bold text-[#0054A3] ">
-            Mitra Kami
-          </h1>
+          <h1 className="text-[24px] font-bold text-[#0054A3] ">Mitra Kami</h1>
           <SliderMitra />
         </div>
 
@@ -286,7 +294,7 @@ const Main = () => {
           <h1 className="text-[30px] font-bold text-[#0054A3]">Galeri</h1>
           <div className="mt-10 grid grid-cols-2 gap-2">
             {/* Galeri */}
-            {galeri.map((item) => (
+            {galleryItems.map((item) => (
               <div key={item.id} className="w-full  bg-slate-400 ">
                 <img
                   className="object-cover h-full"
