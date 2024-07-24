@@ -37,32 +37,14 @@ html {
   width: 100%; /* sesuai dengan lebar gambar */
 }
 .background-2 {
-  background-image: url("/bgbirusatu.png");
+  background-image: url("/bgkonten.png");
   background-size: cover;
-  background-position: center;
-
   width: 100%; /* sesuai dengan lebar gambar */
 }
 
-.background-3 {
-  background-image: url("/bgbirudua.png");
+.background-2-mobile {
+  background-image: url("/bgkontenmobile.png");
   background-size: cover;
-  background-position: center;
-  width: 100%; /* sesuai dengan lebar gambar */
-}
-
-.background-4 {
-  background-image: url("/bgbirusatu.png");
-  background-size: cover;
-  background-position: center;
-
-  width: 100%; /* sesuai dengan lebar gambar */
-}
-
-.background-5 {
-  background-image: url("/bgbirusatu.png");
-  background-size: cover;
-  background-position: center;
-
+  
   width: 100%; /* sesuai dengan lebar gambar */
 }

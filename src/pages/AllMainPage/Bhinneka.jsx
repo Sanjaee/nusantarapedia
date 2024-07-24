@@ -27,7 +27,7 @@ const Bhinneka = () => {
           animate={{ x: 0, opacity: 1 }}
           className="custom-1000:mt-24 custom-200:mt-24 max-w-screen-2xl custom-1200:mt-32 px-5 sm:px-10 flex flex-col justify-center items-center text-[#000000]"
         >
-          <h1 className="text-3xl font-bold  text-[#0054A3]">
+          <h1 className="text-3xl text-center lg:text-start font-bold  text-[#0054A3]">
             Bhinneka Tunggal Ika
           </h1>
           <p className="mt-5 text-sm">
@@ -84,10 +84,10 @@ const Bhinneka = () => {
       </div>
 
       {/* Desktop */}
-      <div className="w-full mt-20   justify-center lg:flex hidden   text-[#696969]">
-        <div className="w-full background-4 max-w-screen-2xl  justify-center  flex-col items-center  px-10 pt-52 text-[#696969]">
+      <div className="w-full  justify-center lg:flex hidden   text-[#696969]">
+        <div className="w-full background-2 max-w-screen-2xl  justify-center  flex-col items-center  px-10 pt-52 text-[#696969]">
           {/* Lagu Daerah */}
-          <div className=" w-full  px-10 py-10 max-w-screen-2xl">
+          <div className=" w-full mt-40 px-10 py-10 max-w-screen-2xl">
             <h1 className="text-[30px] text-[#0054A3]  font-bold">
               {" "}
               Lagu Daerah
@@ -366,41 +366,41 @@ const Bhinneka = () => {
 
       {/* Mobile */}
       <div className="w-full   justify-center lg:hidden flex   text-[#696969]">
-        <div className="w-full background-4 max-w-screen-2xl  justify-center  flex-col items-center  px-5 pt-52 text-[#696969]">
+        <div className="w-full background-2-mobile max-w-screen-2xl  justify-center  flex-col items-center  px-5 pt-72 -mt-40 text-[#696969]">
           {/* Lagu Daerah */}
-          <div className=" w-full  py-10 max-w-screen-2xl">
-            <h1 className="text-[30px] text-[#0054A3]  font-bold">
+          <div className=" w-full  py-5 max-w-screen-2xl">
+            <h1 className="text-[17px] text-[#0054A3]  font-bold">
               {" "}
               Lagu Daerah
             </h1>
-            <div className="mx-10 text-[#4796E0] mt-10">
+            <div className=" text-[#4796E0] mt-5">
               <div className="  flex  flex-col w-full">
                 <Link
-                  className="shadow-lg  flex p-2 justify-between items-center px-6 w-full border border-[#696969] rounded-xl"
+                  className="shadow-lg  flex p-2 justify-between items-center px-6 w-full border border-[#696969] rounded-lg"
                   to="/lagu-1"
                 >
-                  <p className="text-[20px]">Kicir Kicir</p>
+                  <p className="text-[15px]">Kicir Kicir</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/lagu-2"
                 >
-                  <p className="text-[20px]">Cublak Cublak Suweng</p>
+                  <p className="text-[15px]">Cublak Cublak Suweng</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/lagu-3"
                 >
-                  <p className="text-[20px]">Anging Mammirik</p>
+                  <p className="text-[15px]">Anging Mammirik</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/lagu-4"
                 >
-                  <p className="text-[20px]">Yamko Rambe Yamko</p>
+                  <p className="text-[15px]">Yamko Rambe Yamko</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
               </div>
@@ -409,40 +409,40 @@ const Bhinneka = () => {
 
           {/* Tarian Tradisional */}
 
-          <div className=" w-full  py-10 mt-5 max-w-screen-2xl">
-            <h1 className="text-[30px] text-[#0054A3]   font-bold">
+          <div className=" w-full  py-5 mt-5 max-w-screen-2lg">
+            <h1 className="text-[17px] text-[#0054A3]   font-bold">
               {" "}
               Tarian Tradisional
             </h1>
 
-            <div className="mx-10 text-[#4796E0] mt-10">
-              <div className="mt-10  flex  flex-col w-full">
+            <div className=" text-[#4796E0] mt-5">
+              <div className=" flex  flex-col w-full">
                 <Link
-                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/tarian-1"
                 >
-                  <p className="text-[20px]">Bedaya Ketawang</p>
+                  <p className="text-[15px]">Bedaya Ketawang</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/tarian-2"
                 >
-                  <p className="text-[20px]">Jaipongan</p>
+                  <p className="text-[15px]">Jaipongan</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/tarian-3"
                 >
-                  <p className="text-[20px]">Kecak</p>
+                  <p className="text-[15px]">Kecak</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/tarian-4"
                 >
-                  <p className="text-[20px]">Kipas Pakarena</p>
+                  <p className="text-[15px]">Kipas Pakarena</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
               </div>
@@ -450,39 +450,39 @@ const Bhinneka = () => {
           </div>
 
           {/* Hasil Tambang */}
-          <div className=" w-full  py-10 mt-5 max-w-screen-2xl">
-            <h1 className="text-[30px] text-[#0054A3]   font-bold">
+          <div className=" w-full  py-5 mt-5 max-w-screen-2lg">
+            <h1 className="text-[17px] text-[#0054A3]   font-bold">
               Hasil Tambang
             </h1>
 
-            <div className="mx-10  text-[#4796E0] mt-10">
-              <div className="mt-10  flex  flex-col w-full">
+            <div className="  text-[#4796E0] mt-5">
+              <div className="  flex  flex-col w-full">
                 <Link
-                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/tambang-1"
                 >
-                  <p className="text-[20px]">Tambang Emas</p>
+                  <p className="text-[15px]">Tambang Emas</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/tambang-2"
                 >
-                  <p className="text-[20px]">Tambang Nikel</p>
+                  <p className="text-[15px]">Tambang Nikel</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/tambang-3"
                 >
-                  <p className="text-[20px]">Tambang Timah</p>
+                  <p className="text-[15px]">Tambang Timah</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/tambang-4"
                 >
-                  <p className="text-[20px]">Tambang Besi</p>
+                  <p className="text-[15px]">Tambang Besi</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
               </div>
@@ -490,38 +490,38 @@ const Bhinneka = () => {
           </div>
 
           {/* Satwa & Puspa */}
-          <div className=" w-full  py-10 mt-5 max-w-screen-2xl">
-            <h1 className="text-[30px] text-[#0054A3]   font-bold">
+          <div className=" w-full  py-5 mt-5 max-w-screen-2lg">
+            <h1 className="text-[17px] text-[#0054A3]   font-bold">
               Satwa & Puspa
             </h1>
-            <div className="mx-10  text-[#4796E0] mt-10">
-              <div className="mt-10  flex  flex-col w-full">
+            <div className="  text-[#4796E0] mt-5">
+              <div className="  flex  flex-col w-full">
                 <Link
-                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/satwa-1"
                 >
-                  <p className="text-[20px]">Anoa</p>
+                  <p className="text-[15px]">Anoa</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/satwa-2"
                 >
-                  <p className="text-[20px]">Orang Utan</p>
+                  <p className="text-[15px]">Orang Utan</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/satwa-3"
                 >
-                  <p className="text-[20px]">Anggrek</p>
+                  <p className="text-[15px]">Anggrek</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/satwa-4"
                 >
-                  <p className="text-[20px]">Rafflesia Arnoldi</p>
+                  <p className="text-[15px]">Rafflesia Arnoldi</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
               </div>
@@ -529,38 +529,38 @@ const Bhinneka = () => {
           </div>
 
           {/* Gunung & Sungai */}
-          <div className=" w-full  py-10 mt-5 max-w-screen-2xl">
-            <h1 className="text-[30px] text-[#0054A3]   font-bold">
+          <div className=" w-full  py-5 mt-5 max-w-screen-2lg">
+            <h1 className="text-[17px] text-[#0054A3]   font-bold">
               Gunung & Sungai
             </h1>
-            <div className="mx-10  text-[#4796E0] mt-10">
-              <div className="mt-10  flex  flex-col w-full">
+            <div className="  text-[#4796E0] mt-5">
+              <div className="  flex  flex-col w-full">
                 <Link
-                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/gunung-1"
                 >
-                  <p className="text-[20px]">Gunung Lawit</p>
+                  <p className="text-[15px]">Gunung Lawit</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/gunung-2"
                 >
-                  <p className="text-[20px]">Gunung Merapi</p>
+                  <p className="text-[15px]">Gunung Merapi</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/gunung-3"
                 >
-                  <p className="text-[20px]">Sungai Kapuas</p>
+                  <p className="text-[15px]">Sungai Kapuas</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/gunung-4"
                 >
-                  <p className="text-[20px]">Sungai Landak</p>
+                  <p className="text-[15px]">Sungai Landak</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
               </div>
@@ -568,36 +568,36 @@ const Bhinneka = () => {
           </div>
 
           {/* Kerajaan */}
-          <div className=" w-full  py-10 mt-5 max-w-screen-2xl">
-            <h1 className="text-[30px] text-[#0054A3]   font-bold">Kerajaan</h1>
-            <div className="mx-10  text-[#4796E0] mt-10">
-              <div className="mt-10  flex  flex-col w-full">
+          <div className=" w-full  py-5 mt-5 max-w-screen-2lg">
+            <h1 className="text-[17px] text-[#0054A3]   font-bold">Kerajaan</h1>
+            <div className="  text-[#4796E0] mt-5">
+              <div className=" flex  flex-col w-full">
                 <Link
-                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/kerajaan-1"
                 >
-                  <p className="text-[20px]">Kerajaan Luwu</p>
+                  <p className="text-[15px]">Kerajaan Luwu</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/kerajaan-2"
                 >
-                  <p className="text-[20px]">Kerajaan Samudra Pasai</p>
+                  <p className="text-[15px]">Kerajaan Samudra Pasai</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/kerajaan-3"
                 >
-                  <p className="text-[20px]">Kerajaan Singasari</p>
+                  <p className="text-[15px]">Kerajaan Singasari</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/kerajaan-4"
                 >
-                  <p className="text-[20px]">Kerajaan Ternate</p>
+                  <p className="text-[15px]">Kerajaan Ternate</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
               </div>
@@ -605,38 +605,38 @@ const Bhinneka = () => {
           </div>
 
           {/* Pahlawan Nasional */}
-          <div className=" w-full  py-10 mt-5 max-w-screen-2xl">
-            <h1 className="text-[30px] text-[#0054A3]   font-bold">
+          <div className=" w-full  py-5 mt-5 max-w-screen-2lg">
+            <h1 className="text-[17px] text-[#0054A3]   font-bold">
               Pahlawan Nasional
             </h1>
-            <div className="mx-10  text-[#4796E0] mt-10">
-              <div className="mt-10  flex  flex-col w-full">
+            <div className="  text-[#4796E0] mt-5">
+              <div className="  flex  flex-col w-full">
                 <Link
-                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/pahlawan-1"
                 >
-                  <p className="text-[20px]">Jendral Sudirman</p>
+                  <p className="text-[15px]">Jendral Sudirman</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/pahlawan-2"
                 >
-                  <p className="text-[20px]">Martha Christina Tiahahu</p>
+                  <p className="text-[15px]">Martha Christina Tiahahu</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/pahlawan-3"
                 >
-                  <p className="text-[20px]">Sultan Hasanuddin</p>
+                  <p className="text-[15px]">Sultan Hasanuddin</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/pahlawan-4"
                 >
-                  <p className="text-[20px]">Tuanku Imam Bonjol</p>
+                  <p className="text-[15px]">Tuanku Imam Bonjol</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
               </div>

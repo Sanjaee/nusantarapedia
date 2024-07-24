@@ -106,25 +106,17 @@ const UudPage = () => {
       </div>
 
       {/* Mobile */}
-      <div className="w-full flex-col lg:hidden flex justify-center items-center">
+      <div className="w-full flex-col lg:hidden flex justify-center  items-center">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           className="mt-24 px-5 sm:px-10   flex-col text-[#000000] "
         >
+       
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            className="flex-col flex justify-start"
-          >
-            <h1 className="text-3xl font-bold text-[#0054A3] ">
-              Undang-Undang Dasar Negara Republik Indonesia Tahun 1945
-            </h1>
-          </motion.div>
-          <motion.div
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            className=" flex justify-center flex-col items-center mt-10"
+            className=" flex justify-center flex-col items-center "
           >
             <motion.div
               initial={{ x: -100, opacity: 0 }}
@@ -138,9 +130,18 @@ const UudPage = () => {
               />
             </motion.div>
             <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            className="flex-col flex justify-start"
+          >
+            <h1 className="text-3xl font-bold text-[#0054A3] mt-5 text-center">
+              Undang-Undang Dasar Negara Republik Indonesia Tahun 1945
+            </h1>
+          </motion.div>
+            <motion.div
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              className="max-w-[866px] w-full sm:ml-10 mt-10 sm:mt-0"
+              className="max-w-[866px] w-full sm:ml-10 "
             >
               <div className="mt-5">
                 <p className="text-sm text-[#000000]">
@@ -191,10 +192,10 @@ const UudPage = () => {
       </div>
 
       {/* DESKTOP */}
-      <div className="w-full mt-20   justify-center lg:flex hidden   text-[#696969]">
-        <div className="w-full background-3 max-w-screen-2xl  justify-center  flex-col items-center  px-10 pt-52 text-[#696969]">
+      <div className="w-full   justify-center lg:flex hidden  text-[#696969]">
+        <div className="w-full background-2 max-w-screen-2xl  justify-center  flex-col items-center  px-10 pt-52 text-[#696969]">
           {/* Lembaga Negara */}
-          <div className=" w-full  px-10 py-10 max-w-screen-2xl">
+          <div className=" w-full mt-40 px-10 py-10 max-w-screen-2xl">
             <h1 className="text-[30px] text-[#0054A3]  font-bold">
               {" "}
               Lembaga Negara
@@ -279,41 +280,41 @@ const UudPage = () => {
 
       {/* MOBILE */}
       <div className="w-full  justify-center lg:hidden flex   text-[#696969]">
-        <div className="w-full background-3 max-w-screen-2xl  justify-center  flex-col items-center   pt-52 text-[#696969]">
+        <div className="w-full background-2-mobile max-w-screen-2xl  justify-center  flex-col items-center  pt-48 -mt-20  sm:pt-96 sm:-mt-52 text-[#696969]">
           {/* Lembaga Negara */}
-          <div className=" w-full  px-5 py-10 max-w-screen-2xl">
-            <h1 className="text-[30px] text-[#0054A3]  font-bold">
+          <div className=" w-full  px-5 py-5 max-w-screen-2xl">
+            <h1 className="text-[17px] text-[#0054A3]  font-bold">
               {" "}
               Lembaga Negara
             </h1>
-            <div className="mx-10 text-[#4796E0] mt-10">
+            <div className=" text-[#4796E0] mt-5">
               <div className="  flex  flex-col w-full">
                 <Link
-                  className="shadow-lg  flex p-2 justify-between items-center px-6 w-full border border-[#696969] rounded-xl"
+                  className="shadow-lg  flex p-2 justify-between items-center px-6 w-full border border-[#696969] rounded-lg"
                   to="/uud-1"
                 >
-                  <p className="text-[20px]">BPK (Badan Pengawas Keuangan)</p>
+                  <p className="text-[15px]">BPK (Badan Pengawas Keuangan)</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/uud-2"
                 >
-                  <p className="text-[20px]">Mahkamah Konstitusi</p>
+                  <p className="text-[15px]">Mahkamah Konstitusi</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/uud-3"
                 >
-                  <p className="text-[20px]">Komisi Yudisial</p>
+                  <p className="text-[15px]">Komisi Yudisial</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/uud-4"
                 >
-                  <p className="text-[20px]">MPR/DPR</p>
+                  <p className="text-[15px]">MPR/DPR</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
               </div>
@@ -322,40 +323,40 @@ const UudPage = () => {
 
           {/* Bahasa Daerah */}
 
-          <div className=" w-full  px-5 py-10 mt-5 max-w-screen-2xl">
-            <h1 className="text-[30px] text-[#0054A3]   font-bold">
+          <div className=" w-full  px-5 py-5 mt-5 max-w-screen-2lg">
+            <h1 className="text-[17px] text-[#0054A3]   font-bold">
               {" "}
               Bahasa Daerah
             </h1>
 
-            <div className="mx-10 text-[#4796E0] mt-10">
-              <div className="mt-10  flex  flex-col w-full">
+            <div className=" text-[#4796E0] mt-5">
+              <div className=" flex  flex-col w-full">
                 <Link
-                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/bahasa-1"
                 >
-                  <p className="text-[20px]">Bahasa Keyeli</p>
+                  <p className="text-[15px]">Bahasa Keyeli</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/bahasa-2"
                 >
-                  <p className="text-[20px]">Bahasa Melayu</p>
+                  <p className="text-[15px]">Bahasa Melayu</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/bahasa-3"
                 >
-                  <p className="text-[20px]">Bahasa Minang</p>
+                  <p className="text-[15px]">Bahasa Minang</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/bahasa-4"
                 >
-                  <p className="text-[20px]">Bahasa Bugis</p>
+                  <p className="text-[15px]">Bahasa Bugis</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
               </div>

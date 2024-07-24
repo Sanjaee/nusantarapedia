@@ -184,7 +184,7 @@ const Main = () => {
         className="mt-40  items-center flex-col justify-center lg:hidden flex"
       >
         <div className="flex flex-col items-center px-5">
-          <h1 className="text-sm font-semibold mb-10">Didukung oleh:</h1>
+          <h1 className="text-sm font-semibold mb-5">Didukung oleh:</h1>
           <img className="w-52" src="./bgmain1.png" alt="" />
         </div>
         {/* 1 */}

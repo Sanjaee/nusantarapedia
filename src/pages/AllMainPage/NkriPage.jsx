@@ -27,7 +27,7 @@ const NkriPage = () => {
           animate={{ x: 0, opacity: 1 }}
           className="custom-1000:mt-24 custom-200:mt-24 custom-1200:mt-32 max-w-screen-2xl  px-5 sm:px-10 flex flex-col justify-center items-center text-[#000000]"
         >
-          <h1 className="text-3xl font-bold  text-[#0054A3]">
+          <h1 className="text-3xl font-bold text-center lg:text-start  text-[#0054A3]">
             Negara Kesatuan Republik Indonesia
           </h1>
           <p className="mt-5 ">
@@ -59,10 +59,10 @@ const NkriPage = () => {
       </div>
 
       {/* Desktop */}
-      <div className="w-full mt-20   justify-center lg:flex hidden   text-[#696969]">
-        <div className="w-full background-5 max-w-screen-2xl  justify-center  flex-col items-center  px-10 pt-52 text-[#696969]">
+      <div className="w-full   justify-center lg:flex hidden   text-[#696969]">
+        <div className="w-full background-2 max-w-screen-2xl  justify-center  flex-col items-center  px-10 pt-52 text-[#696969]">
           {/* Kuliner */}
-          <div className=" w-full  px-10 py-10 max-w-screen-2xl">
+          <div className=" w-full mt-40   px-10 py-10 max-w-screen-2xl">
             <h1 className="text-[30px] text-[#0054A3]  font-bold"> Kuliner</h1>
             <div className="mx-10 text-[#4796E0] mt-10">
               <div className="  flex  flex-col w-full">
@@ -225,38 +225,38 @@ const NkriPage = () => {
       {/* mobile */}
 
       <div className="w-full   justify-center lg:hidden flex   text-[#696969]">
-        <div className="w-full background-5 max-w-screen-2xl  justify-center  flex-col items-center  px-5 pt-52 text-[#696969]">
+        <div className="w-full background-2-mobile max-w-screen-2xl  justify-center  flex-col items-center  px-5 pt-52 sm:pt-96 text-[#696969]">
           {/* Kuliner */}
-          <div className=" w-full   py-10 max-w-screen-2xl">
-            <h1 className="text-[30px] text-[#0054A3]  font-bold"> Kuliner</h1>
-            <div className="mx-10 text-[#4796E0] mt-10">
+          <div className=" w-full   py-5 max-w-screen-2xl">
+            <h1 className="text-[17px] text-[#0054A3]  font-bold"> Kuliner</h1>
+            <div className=" text-[#4796E0] mt-5">
               <div className="  flex  flex-col w-full">
                 <Link
-                  className="shadow-lg  flex p-2 justify-between items-center px-6 w-full border border-[#696969] rounded-xl"
+                  className="shadow-lg  flex p-2 justify-between items-center px-6 w-full border border-[#696969] rounded-lg"
                   to="/kuliner-1"
                 >
-                  <p className="text-[20px]">Rendang</p>
+                  <p className="text-[15px]">Rendang</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/kuliner-2"
                 >
-                  <p className="text-[20px]">Karedok</p>
+                  <p className="text-[15px]">Karedok</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/kuliner-3"
                 >
-                  <p className="text-[20px]">Kerak Telor</p>
+                  <p className="text-[15px]">Kerak Telor</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/kuliner-4"
                 >
-                  <p className="text-[20px]">Empal Gentong</p>
+                  <p className="text-[15px]">Empal Gentong</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
               </div>
@@ -265,40 +265,40 @@ const NkriPage = () => {
 
           {/* Ibu Kota Provinsi */}
 
-          <div className=" w-full   py-10 mt-5 max-w-screen-2xl">
-            <h1 className="text-[30px] text-[#0054A3]   font-bold">
+          <div className=" w-full   py-5 mt-5 max-w-screen-2lg">
+            <h1 className="text-[17px] text-[#0054A3]   font-bold">
               {" "}
               Ibu Kota Provinsi
             </h1>
 
-            <div className="mx-10 text-[#4796E0] mt-10">
-              <div className="mt-10  flex  flex-col w-full">
+            <div className=" text-[#4796E0] mt-5">
+              <div className=" flex  flex-col w-full">
                 <Link
-                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/ibukota-1"
                 >
-                  <p className="text-[20px]">Denpasar</p>
+                  <p className="text-[15px]">Denpasar</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/ibukota-2"
                 >
-                  <p className="text-[20px]">Manokwari</p>
+                  <p className="text-[15px]">Manokwari</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/ibukota-3"
                 >
-                  <p className="text-[20px]">Samarinda</p>
+                  <p className="text-[15px]">Samarinda</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/ibukota-4"
                 >
-                  <p className="text-[20px]">Semarang</p>
+                  <p className="text-[15px]">Semarang</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
               </div>
@@ -306,39 +306,39 @@ const NkriPage = () => {
           </div>
 
           {/* Lagu Nasional */}
-          <div className=" w-full   py-10 mt-5 max-w-screen-2xl">
-            <h1 className="text-[30px] text-[#0054A3]   font-bold">
+          <div className=" w-full   py-5 mt-5 max-w-screen-2lg">
+            <h1 className="text-[17px] text-[#0054A3]   font-bold">
               {" "}
               Lagu Nasional
             </h1>
-            <div className="mx-10 text-[#4796E0] mt-10">
-              <div className="mt-10  flex  flex-col w-full">
+            <div className=" text-[#4796E0] mt-5">
+              <div className="  flex  flex-col w-full">
                 <Link
-                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/nasional-1"
                 >
-                  <p className="text-[20px]">Halo Halo Bandung</p>
+                  <p className="text-[15px]">Halo Halo Bandung</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/nasional-2"
                 >
-                  <p className="text-[20px]">Hari Merdeka</p>
+                  <p className="text-[15px]">Hari Merdeka</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/nasional-3"
                 >
-                  <p className="text-[20px]">Rayuan Pulau Kelapa</p>
+                  <p className="text-[15px]">Rayuan Pulau Kelapa</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/nasional-4"
                 >
-                  <p className="text-[20px]">Tanah Air Ku</p>
+                  <p className="text-[15px]">Tanah Air Ku</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
               </div>
@@ -346,39 +346,39 @@ const NkriPage = () => {
           </div>
 
           {/* Pulau Terdepan & Terluar */}
-          <div className=" w-full   py-10 mt-5 max-w-screen-2xl">
-            <h1 className="text-[30px] text-[#0054A3]   font-bold">
+          <div className=" w-full   py-5 mt-5 max-w-screen-2lg">
+            <h1 className="text-[17px] text-[#0054A3]   font-bold">
               Pulau Terdepan & Terluar
             </h1>
 
-            <div className="mx-10  text-[#4796E0] mt-10">
-              <div className="mt-10  flex  flex-col w-full">
+            <div className="  text-[#4796E0] mt-5">
+              <div className=" flex  flex-col w-full">
                 <Link
-                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg  flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/pulau-1"
                 >
-                  <p className="text-[20px]">Pulau Berhala</p>
+                  <p className="text-[15px]">Pulau Berhala</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/pulau-2"
                 >
-                  <p className="text-[20px]">Pulau Miangas</p>
+                  <p className="text-[15px]">Pulau Miangas</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/pulau-3"
                 >
-                  <p className="text-[20px]">Pulau Rote</p>
+                  <p className="text-[15px]">Pulau Rote</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
                 <Link
-                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-xl"
+                  className="shadow-lg mt-4 flex p-2 justify-between items-center px-6 border border-[#696969] rounded-lg"
                   to="/pulau-4"
                 >
-                  <p className="text-[20px]">Pulau Weh</p>
+                  <p className="text-[15px]">Pulau Weh</p>
                   <img className=" h-3" src="./arrow.png" alt="bg" />
                 </Link>
               </div>
