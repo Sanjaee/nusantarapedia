@@ -4,9 +4,14 @@ import { Link } from "react-router-dom";
 import NavbarMobile from "./NavbarMobile";
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
@@ -36,21 +41,60 @@ const Navbar = () => {
                 Beranda
               </Link>
             )}
-            {location.pathname === "/" ? (
-              <a
-                href="#empatpilar"
-                className="hover:text-blue-500 cursor-pointer"
+            <li className="relative">
+              <button
+                onClick={toggleDropdown}
+                className={`hover:text-blue-500 cursor-pointer focus:outline-none`}
               >
-                Empat Pilar
-              </a>
-            ) : (
-              <Link
-                to="/#empatpilar"
-                className="hover:text-blue-500 cursor-pointer"
-              >
-                Empat Pilar
-              </Link>
-            )}
+                Konten
+              </button>
+              <AnimatePresence>
+                {isDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.1 }}
+                    className="absolute -left-16 transform -translate-x-1/2 mt-2 w-48 bg-[#fff] rounded-md shadow-lg z-50"
+                  >
+                    <ul className="py-2 text-center">
+                      <li>
+                        <Link
+                          to="/pancasila"
+                          className={`block px-4 py-2 text-gray-800 hover:bg-[#E6F7FF] hover:text-[#0054A3] transition duration-200`}
+                        >
+                          Pancasia
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/undang-undang-dasar-1945"
+                          className={`block px-4 py-2 text-gray-800 hover:bg-[#E6F7FF] hover:text-[#0054A3] transition duration-200`}
+                        >
+                          Undang-Undang Dasar
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/bti"
+                          className={`block px-4 py-2 text-gray-800 hover:bg-[#E6F7FF] hover:text-[#0054A3] transition duration-200`}
+                        >
+                          Bhinneka Tunggal Ika
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/negara-kesatuan-republik-indonesia"
+                          className={`block px-4 py-2 text-gray-800 hover:bg-[#E6F7FF] hover:text-[#0054A3] transition duration-200`}
+                        >
+                          NKRI
+                        </Link>
+                      </li>
+                    </ul>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </li>
             {location.pathname === "/" ? (
               <a href="#mitra" className="hover:text-blue-500 cursor-pointer">
                 Mitra
@@ -77,7 +121,10 @@ const Navbar = () => {
       </div>
 
       {/* Mobile */}
-    <NavbarMobile isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar}/>
+      <NavbarMobile
+        isSidebarOpen={isSidebarOpen}
+        toggleSidebar={toggleSidebar}
+      />
     </>
   );
 };

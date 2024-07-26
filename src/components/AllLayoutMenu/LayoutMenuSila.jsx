@@ -8,7 +8,6 @@ const LayoutMenuSila = () => {
   const location = useLocation();
 
   useEffect(() => {
-  
     if (location.pathname.startsWith("/sila-satu")) {
       setActiveMenu(0);
     } else if (location.pathname.startsWith("/sila-dua")) {
@@ -117,10 +116,12 @@ const LayoutMenuSila = () => {
             {/* Sila Ke-2 */}
             <div>
               <button
-                className="w-full text-left py-3 px-6 bg-[#0054A3] text-white line-clamp-1 whitespace-nowrap transition-colors"
+                className="w-full text-left  py-2 px-6 bg-[#0054A3] text-white  transition-colors"
                 onClick={() => handleButtonClick(1)}
               >
-                Sila Ke-2: Kemanusiaan yang Adil dan Beradab
+                <span className="line-clamp-1">
+                  Sila Ke-2: Kemanusiaan yang Adil dan Beradab
+                </span>
               </button>
               <AnimatePresence>
                 {activeMenu === 1 && (
@@ -243,11 +244,13 @@ const LayoutMenuSila = () => {
             {/* Sila Ke-4 */}
             <div>
               <button
-                className="w-full text-left py-3 px-6 bg-[#0054A3] text-white line-clamp-1 whitespace-nowrap transition-colors"
+                className="w-full text-left py-3 px-6 bg-[#0054A3] text-white  transition-colors"
                 onClick={() => handleButtonClick(3)}
               >
-                Sila Ke-4: Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan
-                dalam Permusyawaratan Perwakilan
+                <span className="line-clamp-1">
+                  Sila Ke-4: Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan
+                  dalam Permusyawaratan Perwakilan
+                </span>
               </button>
               <AnimatePresence>
                 {activeMenu === 3 && (
@@ -307,10 +310,12 @@ const LayoutMenuSila = () => {
             {/* Sila Ke-5 */}
             <div>
               <button
-                className="w-full text-left py-3 px-6 bg-[#0054A3] text-white line-clamp-1 whitespace-nowrap transition-colors"
+                className="w-full text-left py-3 px-6 bg-[#0054A3] text-white  transition-colors"
                 onClick={() => handleButtonClick(4)}
               >
-                Sila Ke-5: Keadilan Sosial Bagi Seluruh Rakyat Indonesia
+                <span className="line-clamp-1">
+                  Sila Ke-5: Keadilan Sosial Bagi Seluruh Rakyat Indonesia
+                </span>
               </button>
               <AnimatePresence>
                 {activeMenu === 4 && (

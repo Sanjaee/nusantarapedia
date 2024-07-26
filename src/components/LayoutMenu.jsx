@@ -68,7 +68,7 @@ const LayoutMenu = ({ children }) => {
             onClick={toggleDropdown}
             className="fixed bottom-24 left-5 z-50 rounded-full bg-[#E6F7FF] p-3"
           >
-            <img src="./hamburger.svg" alt="bg" />
+            <img src="./pilarnav.png" alt="bg" />
           </button>
         </div>
       </div>
