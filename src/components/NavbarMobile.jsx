@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 const NavbarMobile = ({ isSidebarOpen, toggleSidebar }) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
   return (
     <div className="lg:hidden flex justify-between items-center fixed top-0 h-14 z-50 bg-[#E6F7FF] w-full px-4">
       <Link to="/" className="flex items-center">
@@ -54,21 +59,58 @@ const NavbarMobile = ({ isSidebarOpen, toggleSidebar }) => {
                       )}
                     </li>
                     <li>
-                      {location.pathname === "/" ? (
-                        <a
-                          href="#main1"
-                          className="block px-4 py-2 text-black font-semibold hover:bg-white hover:text-[#696969] transition duration-200 w-full text-start"
-                        >
-                          Empat Pilar
-                        </a>
-                      ) : (
-                        <Link
-                          to="/#main1"
-                          className="block px-4 py-2 text-black font-semibold hover:bg-white hover:text-[#696969] transition duration-200 w-full text-start"
-                        >
-                          Empat Pilar
-                        </Link>
-                      )}
+                      <button
+                        onClick={toggleDropdown}
+                       className="block px-4 py-2 text-black font-semibold hover:bg-white hover:text-[#696969] transition duration-200 w-full text-start"
+                      >
+                        Empat Pilar
+                      </button>
+                      <AnimatePresence>
+                        {isDropdownOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.1 }}
+                          
+                          >
+                            <ul className="py-2 ml-5 text-center">
+                              <li>
+                                <Link
+                                  to="/pancasila"
+                                 className="block px-4 py-2 text-black font-semibold hover:bg-white hover:text-[#696969] transition duration-200 w-full text-start"
+                                >
+                                  Pancasila
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  to="/undang-undang-dasar-1945"
+                                className="block px-4 py-2 text-black font-semibold hover:bg-white hover:text-[#696969] transition duration-200 w-full text-start"
+                                >
+                                  Undang-Undang Dasar
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  to="/bti"
+                                 className="block px-4 py-2 text-black font-semibold hover:bg-white hover:text-[#696969] transition duration-200 w-full text-start"
+                                >
+                                 Bhinneka Tunggal Ika
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  to="/negara-kesatuan-republik-indonesia"
+                                 className="block px-4 py-2 text-black font-semibold hover:bg-white hover:text-[#696969] transition duration-200 w-full text-start"
+                                >
+                                 NKRI
+                                </Link>
+                              </li>
+                            </ul>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </li>
 
                     <li>
