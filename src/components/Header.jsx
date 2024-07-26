@@ -33,7 +33,7 @@ const Header = () => {
 
       {/* Mobile */}
       <div
-        id="beranda1"
+        id="kesatu"
         className="pt-24 justify-center lg:hidden flex flex-col items-center"
       >
         <div className="w-full max-w-[1157px] flex flex-col justify-center items-center">
