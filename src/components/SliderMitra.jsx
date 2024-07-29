@@ -1,16 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import axios from "axios";
 
-const staticSliderData = [
-  { id: 1, img_url: "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721624854/mitra1_nulzo1.png" },
-  { id: 2, img_url: "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721628546/mitrabaru_akfdlh.png" },
-  { id: 3, img_url: "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721624854/mitra3_vfexco.png" },
-  { id: 4, img_url: "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721628557/mitra4_a5x8kh.png" },
-  { id: 5, img_url: "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721624854/mitra5_jbcjij.png" },
-  // Add more items as needed
-];
+const API_KEY = "G8XcZJLaeJTx0jQq";
+axios.defaults.headers.common["API_KEY"] = API_KEY;
 
 const settings = {
   infinite: true,
@@ -33,12 +28,26 @@ const settingsMobile = {
 };
 
 const SliderMitra = () => {
+  const [sliderData, setSliderData] = useState([]);
+
+  useEffect(() => {
+    const fetchSliderData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8000/api/mitra");
+        setSliderData(response.data);
+      } catch (error) {
+        console.error("Error fetching slider data:", error);
+      }
+    };
+
+    fetchSliderData();
+  }, []);
   return (
     <>
       {/* Desktop */}
       <div className="w-full custom-1200:max-w-[1200px] custom-1000:max-w-[1000px] lg:block hidden">
         <Slider {...settings}>
-          {staticSliderData.map((slide) => (
+          {sliderData.map((slide) => (
             <div
               key={slide.id}
               className="flex justify-center items-center mx-4 w-full h-[176px]"
@@ -59,7 +68,7 @@ const SliderMitra = () => {
       {/* Mobile */}
       <div className="w-full sm:mt-5 lg:hidden block">
         <Slider {...settingsMobile}>
-          {staticSliderData.map((slide) => (
+          {sliderData.map((slide) => (
             <div
               key={slide.id}
               className="flex justify-center items-center px-2 w-full h-[156px]"

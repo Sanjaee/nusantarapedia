@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
+import axios from "axios";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const staticSliderData = [
-  { id: 1, image_url: "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721458269/Frame_231_md80jn.png" },
-  { id: 2, image_url: "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721545056/Frame_234_m4wbzw.png" },
-  { id: 3, image_url: "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721545033/Frame_235_mkvgme.png" },
-  // Add more items as needed
-];
+const API_KEY = "G8XcZJLaeJTx0jQq";
+axios.defaults.headers.common["API_KEY"] = API_KEY;
 
 const settings = {
   infinite: true,
@@ -33,12 +30,27 @@ const settingsMobile = {
 };
 
 const SliderComponent = () => {
+  const [sliderData, setSliderData] = useState([]);
+
+  useEffect(() => {
+    const fetchSliderData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8000/api/testimoni");
+        setSliderData(response.data);
+      } catch (error) {
+        console.error("Error fetching slider data:", error);
+      }
+    };
+
+    fetchSliderData();
+  }, []);
+
   return (
     <>
       {/* Desktop */}
       <div className="w-full custom-1200:max-w-[1200px] custom-1000:max-w-[1000px] lg:block hidden">
         <Slider {...settings}>
-          {staticSliderData.map((slide) => (
+          {sliderData.map((slide) => (
             <div
               key={slide.id}
               className="flex justify-between px-4 items-center w-full"
@@ -57,7 +69,7 @@ const SliderComponent = () => {
       {/* Mobile */}
       <div className="w-full custom-200:max-w-[250px] custom-300:max-w-[350px] lg:hidden px-5">
         <Slider {...settingsMobile}>
-          {staticSliderData.map((slide) => (
+          {sliderData.map((slide) => (
             <div
               key={slide.id}
               className="flex justify-between px-4 items-center w-full"

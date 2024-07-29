@@ -1,45 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import SliderComponent from "./SliderComponent";
 import SliderMitra from "./SliderMitra";
+import axios from "axios";
 
-// Static gallery data
-const galleryItems = [
-  {
-    id: 1,
-    image_url:
-      "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721549773/galeri1_zvg3w4.png",
-  },
-  {
-    id: 2,
-    image_url:
-      "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721549775/galeri2_vilj28.png",
-  },
-  {
-    id: 3,
-    image_url:
-      "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721549778/galeri3_wrin3z.png",
-  },
-  {
-    id: 4,
-    image_url:
-      "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721455229/galeri4_wqz2ze.png",
-  },
-  {
-    id: 5,
-    image_url:
-      "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721549782/galeri5_rthize.png",
-  },
-  {
-    id: 6,
-    image_url:
-      "https://res.cloudinary.com/dgmlqboeq/image/upload/v1721549784/galeri6_lemofu.png",
-  },
-  // Add more items as needed
-];
-
+const API_KEY = "G8XcZJLaeJTx0jQq";
+axios.defaults.headers.common["API_KEY"] = API_KEY;
 const Main = () => {
+  const [galleryItems, setGalleryItems] = useState([]);
+  useEffect(() => {
+    const fetchGalleryData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8000/api/galery");
+        setGalleryItems(response.data);
+      } catch (error) {
+        console.error("Error fetching gallery data:", error);
+      }
+    };
+
+    fetchGalleryData();
+  }, []);
   return (
     <>
       {/* Dekstop */}
