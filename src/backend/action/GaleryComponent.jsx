@@ -61,6 +61,7 @@ const GalleryComponent = () => {
       setForm({ id: "", image_url: "" });
       setEditing(false);
       fetchGalleries();
+      window.location.reload();
     } catch (error) {
       toast.error("Error updating gallery item.");
       console.error("Error updating gallery item:", error);

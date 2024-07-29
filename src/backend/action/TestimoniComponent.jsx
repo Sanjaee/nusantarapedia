@@ -7,13 +7,19 @@ import { useLogin } from "../useLogin";
 
 const API_KEY = "G8XcZJLaeJTx0jQq";
 
-
 axios.defaults.headers.common["API_KEY"] = API_KEY;
 
 const TestimoniComponent = () => {
   useLogin();
   const [testimonis, setTestimonis] = useState([]);
-  const [form, setForm] = useState({ id: "", image_url: "" });
+  const [form, setForm] = useState({
+    id: "",
+    img_url: "",
+    name: "",
+    jabatan: "",
+    univ: "",
+    deskripsi: "",
+  });
   const [editing, setEditing] = useState(false);
   const [deleteConfirmation, setDeleteConfirmation] = useState(false);
   const [selectedTestimoniId, setSelectedTestimoniId] = useState(null);
@@ -40,11 +46,16 @@ const TestimoniComponent = () => {
   const handleAddSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8000/api/testimoni", {
-        image_url: form.image_url,
-      });
+      await axios.post("http://localhost:8000/api/testimoni", form);
       toast.success("Testimoni added successfully!");
-      setForm({ id: "", image_url: "" }); // Clear form input
+      setForm({
+        id: "",
+        img_url: "",
+        name: "",
+        jabatan: "",
+        univ: "",
+        deskripsi: "",
+      }); // Clear form input
       fetchTestimonis();
     } catch (error) {
       toast.error("Error adding testimoni.");
@@ -55,18 +66,25 @@ const TestimoniComponent = () => {
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:8000/api/testimoni/${form.id}`, {
-        image_url: form.image_url,
-      });
+      await axios.put(`http://localhost:8000/api/testimoni/${form.id}`, form);
       toast.success("Testimoni updated successfully!");
-      setForm({ id: "", image_url: "" });
+      setForm({
+        id: "",
+        img_url: "",
+        name: "",
+        jabatan: "",
+        univ: "",
+        deskripsi: "",
+      });
       setEditing(false);
       fetchTestimonis();
+      window.location.reload(); // Reload the page to reflect changes
     } catch (error) {
       toast.error("Error updating testimoni.");
       console.error("Error updating testimoni:", error);
     }
   };
+  
 
   const handleEdit = (testimoni) => {
     setForm(testimoni);
@@ -102,16 +120,61 @@ const TestimoniComponent = () => {
           <h3 className="text-xl font-semibold mb-4">Add Testimoni</h3>
           <form onSubmit={handleAddSubmit} className="space-y-6">
             <div>
-              <label className="block text-gray-700">
-                Tambah Image URL disini
-              </label>
+              <label className="block text-gray-700">Image URL</label>
               <input
                 type="text"
-                name="image_url"
+                name="img_url"
                 required
-                value={form.image_url} // Bind the form value
+                value={form.img_url}
                 onChange={handleChange}
                 placeholder="Masukkan image URL disini"
+                className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700">Nama</label>
+              <input
+                type="text"
+                name="name"
+                required
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Masukkan nama disini"
+                className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700">Jabatan</label>
+              <input
+                type="text"
+                name="jabatan"
+                required
+                value={form.jabatan}
+                onChange={handleChange}
+                placeholder="Masukkan jabatan disini"
+                className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700">Universitas</label>
+              <input
+                type="text"
+                name="univ"
+                required
+                value={form.univ}
+                onChange={handleChange}
+                placeholder="Masukkan universitas disini"
+                className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700">Deskripsi</label>
+              <textarea
+                name="deskripsi"
+                required
+                value={form.deskripsi}
+                onChange={handleChange}
+                placeholder="Masukkan deskripsi disini"
                 className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -136,17 +199,23 @@ const TestimoniComponent = () => {
                   className="flex flex-col sm:flex-row items-center justify-between p-4 border rounded-md"
                 >
                   <div className="flex flex-col w-full">
-                    <div className="flex flex-col ">
-                      <div className="flex items-center mb-2">
-                        <span className="mr-2 font-bold">{index + 1}.</span>
+                    <div className="justify-center bg-[#FFFFFF] rounded-2xl items-start flex flex-col w-full h-[200px] px-5">
+                      <div className="flex items-start">
                         <img
-                          src={testimoni.image_url}
-                          alt="Testimoni"
-                          className="w-80 border object-cover rounded-md mr-4"
+                          className="rounded-full w-[95px] h-[95px] object-cover"
+                          src={testimoni.img_url}
+                          alt=""
                         />
+                        <div className=" w-[140px] ml-5 text-start text-[#696969]">
+                          <p className="font-bold text-sm text-[#000000]">
+                            {testimoni.name}
+                          </p>
+                          <p className="text-[10px]">{testimoni.jabatan}</p>
+                          <p className="text-[10px]">{testimoni.univ}</p>
+                        </div>
                       </div>
-                      <p className="text-gray-800 lg:block hidden">
-                        {testimoni.image_url}
+                      <p className="text-[10px] mt-5 text-center text-[#696969]">
+                        {testimoni.deskripsi}
                       </p>
                     </div>
                     <div className="flex space-x-2 mt-4 ">
@@ -172,33 +241,74 @@ const TestimoniComponent = () => {
 
         {editing && (
           <Modal isOpen={editing} onClose={() => setEditing(false)}>
-            <h3 className="text-xl font-semibold mb-4">Edit Testimoni</h3>
-            <form onSubmit={handleEditSubmit} className="space-y-6">
-              <div>
-                <label className="block text-gray-700">Masukan Image URL</label>
-                <input
-                  type="text"
-                  name="image_url"
-                  value={form.image_url}
-                  onChange={handleChange}
-                  className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <img className="mt-2 w-80 border" src={form.image_url} alt="" />
-              </div>
-              <button
-                type="submit"
-                className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                Update Testimoni
-              </button>
-              <button
-                type="button"
-                onClick={() => setEditing(false)}
-                className="px-4 py-2 ml-4 bg-gray-500 text-white rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
-              >
-                Cancel
-              </button>
-            </form>
+            <div className="bg-white p-6 rounded-lg shadow-lg max-h-screen overflow-y-auto">
+              <h3 className="text-xl font-semibold mb-4">Edit Testimoni</h3>
+              <form onSubmit={handleEditSubmit} className="space-y-6">
+                <div>
+                  <label className="block text-gray-700">Image URL</label>
+                  <input
+                    type="text"
+                    name="img_url"
+                    value={form.img_url}
+                    onChange={handleChange}
+                    className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                  <img className="mt-2 w-80 border" src={form.img_url} alt="" />
+                </div>
+                <div>
+                  <label className="block text-gray-700">Nama</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700">Jabatan</label>
+                  <input
+                    type="text"
+                    name="jabatan"
+                    value={form.jabatan}
+                    onChange={handleChange}
+                    className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700">Universitas</label>
+                  <input
+                    type="text"
+                    name="univ"
+                    value={form.univ}
+                    onChange={handleChange}
+                    className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700">Deskripsi</label>
+                  <textarea
+                    name="deskripsi"
+                    value={form.deskripsi}
+                    onChange={handleChange}
+                    className="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  Update Testimoni
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setEditing(false)}
+                  className="px-4 py-2 ml-4 bg-gray-500 text-white rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                >
+                  Cancel
+                </button>
+              </form>
+            </div>
           </Modal>
         )}
 

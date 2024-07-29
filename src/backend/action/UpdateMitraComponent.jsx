@@ -62,6 +62,7 @@ const UpdateMitraComponent = () => {
       setForm({ id: "", img_url: "" });
       setEditing(false);
       fetchTestimonis();
+      window.location.reload();
     } catch (error) {
       toast.error("Error updating testimoni.");
       console.error("Error updating testimoni:", error);

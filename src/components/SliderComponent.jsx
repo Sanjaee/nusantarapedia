@@ -37,6 +37,7 @@ const SliderComponent = () => {
       try {
         const response = await axios.get("http://localhost:8000/api/testimoni");
         setSliderData(response.data);
+        console.log(response.data);
       } catch (error) {
         console.error("Error fetching slider data:", error);
       }
@@ -55,12 +56,25 @@ const SliderComponent = () => {
               key={slide.id}
               className="flex justify-between px-4 items-center w-full"
             >
-              <img
-                className="object-cover object-center h-full max-h-[317px] w-full rounded-xl"
-                src={slide.image_url}
-                alt={`Slide ${slide.id}`}
-                loading="lazy"
-              />
+              <div className="justify-center bg-[#FFFFFF] rounded-2xl items-start flex flex-col w-full h-[317px] px-5">
+                <div className="flex items-start">
+                  <img
+                    className="rounded-full w-[75px] h-[75px] object-cover"
+                    src={slide.img_url}
+                    alt=""
+                  />
+                  <div className=" w-[200px] ml-6 text-start text-[#696969]">
+                    <p className="font-bold text-xl text-[#000000]">
+                      {slide.name}
+                    </p>
+                    <p className="text-sm">{slide.jabatan}</p>
+                    <p className="text-sm">{slide.univ}</p>
+                  </div>
+                </div>
+                <p className="text-sm mt-5 text-center text-[#696969]">
+                  {slide.deskripsi}
+                </p>
+              </div>
             </div>
           ))}
         </Slider>
@@ -74,12 +88,25 @@ const SliderComponent = () => {
               key={slide.id}
               className="flex justify-between px-4 items-center w-full"
             >
-              <img
-                className="object-cover object-center w-full rounded-xl"
-                src={slide.image_url}
-                alt={`Slide ${slide.id}`}
-                loading="lazy"
-              />
+              <div className="justify-center bg-[#FFFFFF] rounded-2xl items-start flex flex-col w-full h-[200px] px-5">
+                <div className="flex items-start">
+                  <img
+                    className="rounded-full w-[55px] h-[55px] object-cover"
+                    src={slide.img_url}
+                    alt=""
+                  />
+                  <div className=" w-[140px] ml-5 text-start text-[#696969]">
+                    <p className="font-bold text-sm text-[#000000]">
+                      {slide.name}
+                    </p>
+                    <p className="text-[10px]">{slide.jabatan}</p>
+                    <p className="text-[10px]">{slide.univ}</p>
+                  </div>
+                </div>
+                <p className="text-[10px] mt-5 text-center text-[#696969]">
+                  {slide.deskripsi}
+                </p>
+              </div>
             </div>
           ))}
         </Slider>
