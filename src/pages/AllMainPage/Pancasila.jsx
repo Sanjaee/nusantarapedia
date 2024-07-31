@@ -23,7 +23,7 @@ const Pancasila = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full flex-col flex justify-center custom-300:-mb-28 items-center ">
+      <div className="w-full flex-col flex justify-center mb-20  items-center ">
         <div className="custom-1000:mt-24 custom-1200:mt-32 custom-300:mt-24 px-5 sm:px-10 max-w-screen-2xl flex flex-col text-[#000000] sm:flex-row sm:justify-between items-center">
           <div className="flex items-center  justify-center min-w-[300px]">
             <motion.img
@@ -76,7 +76,7 @@ const Pancasila = () => {
 
       {/* Desktop */}
       <div className="w-full   justify-center lg:flex hidden   text-[#696969]">
-        <div className="w-full  background-2 max-w-screen-2xl  justify-center  flex-col items-center  px-10 pt-52 text-[#696969]">
+        <div className="w-full  background-1 max-w-screen-2xl  justify-center  flex-col items-center  px-10  text-[#696969]">
           {/* sila 1 */}
           <div className=" w-full mt-40  px-10 py-10 max-w-screen-2xl">
             <h1 className="text-[30px] text-[#0054A3]  font-bold">
@@ -291,7 +291,7 @@ const Pancasila = () => {
 
       {/* Mobile */}
       <div className="w-full   justify-center lg:hidden flex   text-[#696969]">
-        <div className="w-full background-2-mobile  max-w-screen-2xl  justify-center  flex-col items-center  px-5 pt-52 sm:pt-96 text-[#696969]">
+        <div className="w-full background-2-mobile  max-w-screen-2xl  justify-center  flex-col items-center  px-5 pt-10 text-[#696969]">
           {/* sila 1 */}
           <div className=" w-full   py-10 ">
             <h1 className="text-[17px] text-[#0054A3]  font-bold">

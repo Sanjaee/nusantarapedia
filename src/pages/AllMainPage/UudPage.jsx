@@ -21,7 +21,7 @@ const UudPage = () => {
     <>
       {/* Desktop */}
       <Navbar />
-      <div className="w-full flex-col lg:flex hidden justify-center items-center">
+      <div className="w-full flex-col lg:flex hidden justify-center  mb-20 items-center">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -106,7 +106,7 @@ const UudPage = () => {
       </div>
 
       {/* Mobile */}
-      <div className="w-full flex-col lg:hidden flex justify-center  items-center">
+      <div className="w-full flex-col lg:hidden flex justify-center mb-20  items-center">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -193,7 +193,7 @@ const UudPage = () => {
 
       {/* DESKTOP */}
       <div className="w-full   justify-center lg:flex hidden  text-[#696969]">
-        <div className="w-full background-2 max-w-screen-2xl  justify-center  flex-col items-center  px-10 pt-52 text-[#696969]">
+        <div className="w-full background-2 max-w-screen-2xl  justify-center  flex-col items-center  px-10  text-[#696969]">
           {/* Lembaga Negara */}
           <div className=" w-full mt-40 px-10 py-10 max-w-screen-2xl">
             <h1 className="text-[30px] text-[#0054A3]  font-bold">
@@ -280,7 +280,7 @@ const UudPage = () => {
 
       {/* MOBILE */}
       <div className="w-full  justify-center lg:hidden flex   text-[#696969]">
-        <div className="w-full background-2-mobile max-w-screen-2xl  justify-center  flex-col items-center  pt-48 -mt-20  sm:pt-96 sm:-mt-52 text-[#696969]">
+        <div className="w-full background-2-mobile max-w-screen-2xl  justify-center  flex-col items-center    pt-10  text-[#696969]">
           {/* Lembaga Negara */}
           <div className=" w-full  px-5 py-5 max-w-screen-2xl">
             <h1 className="text-[17px] text-[#0054A3]  font-bold">

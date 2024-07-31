@@ -21,7 +21,7 @@ const Bhinneka = () => {
     <>
       {/* Desktop */}
       <Navbar />
-      <div className="w-full justify-center flex items-center  ">
+      <div className="w-full justify-center flex mb-20 items-center  ">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -85,7 +85,7 @@ const Bhinneka = () => {
 
       {/* Desktop */}
       <div className="w-full  justify-center lg:flex hidden   text-[#696969]">
-        <div className="w-full background-2 max-w-screen-2xl  justify-center  flex-col items-center  px-10 pt-52 text-[#696969]">
+        <div className="w-full background-3 max-w-screen-2xl  justify-center  flex-col items-center  px-10  text-[#696969]">
           {/* Lagu Daerah */}
           <div className=" w-full mt-40 px-10 py-10 max-w-screen-2xl">
             <h1 className="text-[30px] text-[#0054A3]  font-bold">
@@ -365,8 +365,8 @@ const Bhinneka = () => {
       </div>
 
       {/* Mobile */}
-      <div className="w-full   justify-center lg:hidden flex   text-[#696969]">
-        <div className="w-full background-2-mobile max-w-screen-2xl  justify-center  flex-col items-center  px-5 pt-72 -mt-40 text-[#696969]">
+      <div className="w-full   justify-center lg:hidden flex    text-[#696969]">
+        <div className="w-full background-2-mobile max-w-screen-2xl  justify-center  flex-col items-center  px-5 pt-20  text-[#696969]">
           {/* Lagu Daerah */}
           <div className=" w-full  py-5 max-w-screen-2xl">
             <h1 className="text-[17px] text-[#0054A3]  font-bold">

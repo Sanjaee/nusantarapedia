@@ -20,24 +20,41 @@ html {
 
 /* Active dot styles */
 .slick-dots li.slick-active button:before {
-  color: #88C5FF; /* Change the color of the active dot */
+  color: #88c5ff; /* Change the color of the active dot */
 }
 
-.background-1 {
+.background-beranda {
   background-image: url("/bg-1.png");
   background-size: cover;
   background-position: center;
   width: 100%; /* sesuai dengan lebar gambar */
 }
 
-.background-1-mobile {
+.background-beranda-mobile {
   background-image: url("/bgmobile.png");
   background-size: cover;
   background-position: center;
   width: 100%; /* sesuai dengan lebar gambar */
 }
+.background-1 {
+  background-image: url("/bgkonten1.png");
+  background-size: cover;
+  width: 100%; /* sesuai dengan lebar gambar */
+}
 .background-2 {
-  background-image: url("/bgkonten.png");
+  background-image: url("/bgkonten2.png");
+  background-size: cover;
+  width: 100%; /* sesuai dengan lebar gambar */
+}
+
+.background-3 {
+  background-image: url("/bgkonten3.png");
+  background-size: cover;
+  width: 100%; /* sesuai dengan lebar gambar */
+}
+
+.background-4 {
+  background-image: url("/bgkonten4.png");
   background-size: cover;
   width: 100%; /* sesuai dengan lebar gambar */
 }
@@ -45,6 +62,6 @@ html {
 .background-2-mobile {
   background-image: url("/bgkontenmobile.png");
   background-size: cover;
-  
+  min-width: 320px;
   width: 100%; /* sesuai dengan lebar gambar */
 }

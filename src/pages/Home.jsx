@@ -9,9 +9,9 @@ const Home = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1000) {
-        setBgClass("background-1");
+        setBgClass("background-beranda");
       } else {
-        setBgClass("background-1-mobile");
+        setBgClass("background-beranda-mobile");
       }
     };
 
