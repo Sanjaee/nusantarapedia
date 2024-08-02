@@ -10,7 +10,7 @@ const GunungSungaiSatu = () => {
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full text-sm sm:pl-[350px] pl-2 pr-4 pb-40"
+        className="w-full text-sm sm:pl-[350px] px-6 pb-40"
       >
         <h1 className="text-2xl text-[#0054A3] font-bold text-center">
           Gunung Lawit

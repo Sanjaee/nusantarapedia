@@ -48,7 +48,7 @@ const UudPage = () => {
             >
               <img
                 src="./uudbook.png"
-                className="max-h-[270.48px] w-full h-full max-w-[270.48px]  "
+                className="max-h-[270.48px] w-full h-full max-w-[270.48px]  custom-1400:max-w-[400px] custom-1400:max-h-[400px]"
                 alt="logo"
               />
             </motion.div>
@@ -57,8 +57,8 @@ const UudPage = () => {
               animate={{ x: 0, opacity: 1 }}
               className="max-w-[866px] w-full sm:ml-10 mt-10 sm:mt-0"
             >
-              <div className="mt-5">
-                <p className="text-sm text-[#000000]">
+              <div className="mt-5 text-sm custom-1400:text-xl">
+                <p className=" text-[#000000]">
                   Undang-Undang Dasar Negara Republik Indonesia Tahun 1945
                   (disingkat UUD 1945; terkadang juga disingkat UUD '45, UUD RI
                   1945, atau UUD NRI 1945) adalah konstitusi dan sumber hukum
@@ -68,7 +68,7 @@ const UudPage = () => {
                   1945.
                 </p>
 
-                <p className="mt-5 text-sm text-[#000000]">
+                <p className="mt-5  text-[#000000]">
                   Perumusan UUD 1945 dimulai dengan kelahiran dasar negara
                   Pancasila pada tanggal 1 Juni 1945 dalam sidang pertama BPUPK.
                   Perumusan UUD yang rill sendiri mulai dilakukan pada tanggal
@@ -86,7 +86,7 @@ const UudPage = () => {
               </div>
             </motion.div>
           </motion.div>
-          <p className="mt-10 text-sm">
+          <p className="mt-10 text-sm custom-1400:text-xl">
             UUD 1945 memiliki otoritas hukum tertinggi dalam sistem pemerintahan
             negara Indonesia, sehingga seluruh lembaga negara di Indonesia harus
             tunduk pada UUD 1945 dan penyelenggaraan negara harus mengikuti
@@ -96,7 +96,7 @@ const UudPage = () => {
             sementara Mahkamah Agung atas peraturan di bawah undang-undang, yang
             bertentangan dengan ketentuan UUD 1945.
           </p>
-          <p className="mt-5 text-sm">
+          <p className="mt-5 text-sm custom-1400:text-xl">
             Wewenang untuk melakukan pengubahan terhadap UUD 1945 dimiliki
             Majelis Permusyawaratan Rakyat, seperti yang telah dilakukan oleh
             lembaga ini sebanyak empat kali. Ketentuan mengenai perubahan UUD
@@ -193,9 +193,9 @@ const UudPage = () => {
 
       {/* DESKTOP */}
       <div className="w-full   justify-center lg:flex hidden  text-[#696969]">
-        <div className="w-full background-2 max-w-screen-2xl  justify-center  flex-col items-center  px-10  text-[#696969]">
+        <div className="w-full background-2   justify-center  flex-col items-center  px-10 lg:pt-20  text-[#696969]">
           {/* Lembaga Negara */}
-          <div className=" w-full mt-40 px-10 py-10 max-w-screen-2xl">
+          <div className=" w-full mt-40 px-10 py-10 ">
             <h1 className="text-[30px] text-[#0054A3]  font-bold">
               {" "}
               Lembaga Negara
@@ -236,7 +236,7 @@ const UudPage = () => {
 
           {/* Bahasa Daerah */}
 
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">
               {" "}
               Bahasa Daerah

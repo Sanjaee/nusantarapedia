@@ -24,13 +24,13 @@ const Pancasila = () => {
     <>
       <Navbar />
       <div className="w-full flex-col flex justify-center mb-20  items-center ">
-        <div className="custom-1000:mt-24 custom-1200:mt-32 custom-300:mt-24 px-5 sm:px-10 max-w-screen-2xl flex flex-col text-[#000000] sm:flex-row sm:justify-between items-center">
+        <div className="custom-1000:mt-24 custom-1200:mt-32 custom-300:mt-24 px-5 sm:px-10 max-w-[1440px] flex flex-col text-[#000000] sm:flex-row sm:justify-between items-center">
           <div className="flex items-center  justify-center min-w-[300px]">
             <motion.img
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               src="./garuda.png"
-              className="max-h-[270.48px] w-full h-full max-w-[270.48px]"
+              className="max-h-[270.48px]  w-full h-full max-w-[270.48px] custom-1400:max-w-[400px] custom-1400:max-h-[400px]"
               alt="logo"
             />
           </div>
@@ -40,20 +40,20 @@ const Pancasila = () => {
             className="max-w-[866px] w-full sm:ml-10 mt-10 sm:mt-0"
           >
             <h1 className="text-4xl font-bold text-center lg:text-start text-[#0054A3]">Pancasila</h1>
-            <div className="mt-5">
-              <p className="text-sm">
+            <div className="mt-5 text-sm custom-1400:text-xl ">
+              <p >
                 Pancasila adalah dasar negara Indonesia. Nama ini terdiri dari
                 dua kata dari bahasa Sanskerta: पञ्च "pañca" berarti lima dan
                 शीला "śīla" berarti prinsip atau asas. Pancasila merupakan
                 rumusan dan pedoman kehidupan berbangsa dan bernegara bagi
                 seluruh rakyat Indonesia.
               </p>
-              <p className="mt-5 text-sm">
+              <p className="mt-5 ">
                 Lima ideologi utama penyusun Pancasila merupakan lima sila
                 Pancasila. Ideologi utama tersebut tercantum pada alinea keempat
                 dalam Pembukaan Undang-Undang Dasar 1945:
               </p>
-              <ol className="mt-5 text-sm list-decimal list-inside">
+              <ol className="mt-5  list-decimal list-inside">
                 <li>Ketuhanan yang Maha Esa</li>
                 <li>Kemanusiaan yang adil dan beradab</li>
                 <li>Persatuan Indonesia</li>
@@ -63,7 +63,7 @@ const Pancasila = () => {
                 </li>
                 <li>Keadilan sosial bagi seluruh rakyat Indonesia</li>
               </ol>
-              <p className="mt-5 text-sm">
+              <p className="mt-5 ">
                 Sekalipun terjadi perubahan isi dan urutan lima sila Pancasila
                 yang berlangsung dalam beberapa tahap selama masa perumusan
                 Pancasila pada tahun 1945, tanggal 1 Juni diperingati bersama
@@ -76,9 +76,9 @@ const Pancasila = () => {
 
       {/* Desktop */}
       <div className="w-full   justify-center lg:flex hidden   text-[#696969]">
-        <div className="w-full  background-1 max-w-screen-2xl  justify-center  flex-col items-center  px-10  text-[#696969]">
+        <div className="w-full  background-1 justify-center  flex-col items-center  px-10 lg:pt-20 text-[#696969]">
           {/* sila 1 */}
-          <div className=" w-full mt-40  px-10 py-10 max-w-screen-2xl">
+          <div className=" w-full mt-40  px-10 py-10">
             <h1 className="text-[30px] text-[#0054A3]  font-bold">
               {" "}
               Sila Ke-1: Ketuhanan Yang Maha Esa
@@ -119,7 +119,7 @@ const Pancasila = () => {
 
           {/* sila 2 */}
 
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">
               {" "}
               Sila Ke-2: Kemanusiaan Yang Adil Dan Beradab
@@ -164,7 +164,7 @@ const Pancasila = () => {
           </div>
 
           {/* sila 3 */}
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">
               {" "}
               Sila Ke-3: Persatuan Indonesia
@@ -208,7 +208,7 @@ const Pancasila = () => {
           </div>
 
           {/* sila 4 */}
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">
               Sila Ke-4: Kerakyatan Yang Dipimpin Oleh Hikmat Kebijaksanaan
               Dalam Permusyawaratan Perwakilan
@@ -249,7 +249,7 @@ const Pancasila = () => {
           </div>
 
           {/* sila 5 */}
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">
               Sila Ke-5: Keadilan Sosial Bagi Seluruh Rakyat Indonesia
             </h1>

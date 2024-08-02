@@ -30,7 +30,7 @@ const NkriPage = () => {
           <h1 className="text-3xl font-bold text-center lg:text-start  text-[#0054A3]">
             Negara Kesatuan Republik Indonesia
           </h1>
-          <p className="mt-5 ">
+          <p className="mt-5 text-sm custom-1400:text-xl">
             Indonesia, atau Republik Indonesia, adalah negara kepulauan di Asia
             Tenggara, melintasi garis khatulistiwa. Dikenal sebagai negara
             lintas benua, Indonesia terbesar ke-14 di dunia dengan luas wilayah
@@ -39,7 +39,7 @@ const NkriPage = () => {
             dengan mayoritas penganut Islam.
           </p>
 
-          <p className="mt-5 ">
+          <p className="mt-5 text-sm custom-1400:text-xl">
             Sejarah Indonesia dipengaruhi oleh bangsa pendatang dan penjajah.
             Sriwijaya, kerajaan Hindu-Buddha di Palembang, memainkan peran
             penting dalam perdagangan abad ke-7. Islam masuk di abad ke-8,
@@ -47,7 +47,7 @@ const NkriPage = () => {
             kemerdekaan pada 17 Agustus 1945, setelah era kolonial Belanda.
           </p>
 
-          <p className="mt-5 ">
+          <p className="mt-5 text-sm custom-1400:text-xl">
             Dengan beragam suku, bahasa, dan agama, semboyan "Bhinneka Tunggal
             Ika" mencerminkan keberagaman yang menyatu. Ibu kota saat ini adalah
             Jakarta, dengan rencana pemindahan ke Ibu Kota Nusantara di
@@ -60,9 +60,9 @@ const NkriPage = () => {
 
       {/* Desktop */}
       <div className="w-full   justify-center lg:flex hidden   text-[#696969]">
-        <div className="w-full background-4 max-w-screen-2xl  justify-center  flex-col items-center  px-10  text-[#696969]">
+        <div className="w-full background-4   justify-center  flex-col items-center  px-10 lg:pt-20  text-[#696969]">
           {/* Kuliner */}
-          <div className=" w-full mt-40   px-10 py-10 max-w-screen-2xl">
+          <div className=" w-full mt-40   px-10 py-10 ">
             <h1 className="text-[30px] text-[#0054A3]  font-bold"> Kuliner</h1>
             <div className="mx-10 text-[#4796E0] mt-10">
               <div className="  flex  flex-col w-full">
@@ -100,7 +100,7 @@ const NkriPage = () => {
 
           {/* Ibu Kota Provinsi */}
 
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">
               {" "}
               Ibu Kota Provinsi
@@ -141,7 +141,7 @@ const NkriPage = () => {
           </div>
 
           {/* Lagu Nasional */}
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">
               {" "}
               Lagu Nasional
@@ -181,7 +181,7 @@ const NkriPage = () => {
           </div>
 
           {/* Pulau Terdepan & Terluar */}
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">
               Pulau Terdepan & Terluar
             </h1>

@@ -14,6 +14,7 @@ export default {
         "custom-600": "600px",
         "custom-1000": "1000px",
         "custom-1200": "1200px",
+       "custom-1400": "1400px",
       },
       backgroundImage: {
         'background-1': "url('/bg-1.png')",

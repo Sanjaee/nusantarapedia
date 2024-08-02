@@ -30,7 +30,7 @@ const Bhinneka = () => {
           <h1 className="text-3xl text-center lg:text-start font-bold  text-[#0054A3]">
             Bhinneka Tunggal Ika
           </h1>
-          <p className="mt-5 text-sm">
+          <p className="mt-5 text-sm custom-1400:text-xl">
             Bhinneka Tunggal Ika adalah semboyan yang mencerminkan semangat
             persatuan dan kesatuan dalam keberagaman di Indonesia. Motto ini
             tercetus dari bahasa Jawa Kuno dan memiliki makna mendalam, yaitu
@@ -38,7 +38,7 @@ const Bhinneka = () => {
             dijelaskan dari makna Bhinneka Tunggal Ika adalah:
           </p>
 
-          <ol className="mt-5 text-sm list-decimal list-outside">
+          <ol className="mt-5 text-sm custom-1400:text-xl  list-decimal list-outside">
             <li>
               Keragaman Budaya: Indonesia dikenal sebagai negara dengan
               keragaman budaya yang kaya. Bhinneka Tunggal Ika menekankan bahwa
@@ -72,7 +72,7 @@ const Bhinneka = () => {
             </li>
           </ol>
 
-          <p className="mt-5 text-sm">
+          <p className="mt-5 text-sm custom-1400:text-xl">
             Makna mendalam dari Bhinneka Tunggal Ika terus dijunjung tinggi
             sebagai landasan moral dan spiritual dalam kehidupan masyarakat
             Indonesia. Semboyan ini mengajarkan bahwa keberagaman adalah
@@ -85,9 +85,9 @@ const Bhinneka = () => {
 
       {/* Desktop */}
       <div className="w-full  justify-center lg:flex hidden   text-[#696969]">
-        <div className="w-full background-3 max-w-screen-2xl  justify-center  flex-col items-center  px-10  text-[#696969]">
+        <div className="w-full background-3   justify-center  flex-col items-center  px-10 lg:pt-20  text-[#696969]">
           {/* Lagu Daerah */}
-          <div className=" w-full mt-40 px-10 py-10 max-w-screen-2xl">
+          <div className=" w-full mt-40 px-10 py-10 ">
             <h1 className="text-[30px] text-[#0054A3]  font-bold">
               {" "}
               Lagu Daerah
@@ -128,7 +128,7 @@ const Bhinneka = () => {
 
           {/* Tarian Tradisional */}
 
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">
               {" "}
               Tarian Tradisional
@@ -169,7 +169,7 @@ const Bhinneka = () => {
           </div>
 
           {/* Hasil Tambang */}
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">
               Hasil Tambang
             </h1>
@@ -209,7 +209,7 @@ const Bhinneka = () => {
           </div>
 
           {/* Satwa & Puspa */}
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">
               Satwa & Puspa
             </h1>
@@ -248,7 +248,7 @@ const Bhinneka = () => {
           </div>
 
           {/* Gunung & Sungai */}
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">
               Gunung & Sungai
             </h1>
@@ -287,7 +287,7 @@ const Bhinneka = () => {
           </div>
 
           {/* Kerajaan */}
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">Kerajaan</h1>
             <div className="mx-10  text-[#4796E0] mt-10">
               <div className="mt-10  flex  flex-col w-full">
@@ -324,7 +324,7 @@ const Bhinneka = () => {
           </div>
 
           {/* Pahlawan Nasional */}
-          <div className=" w-full  px-10 py-10 mt-5 max-w-screen-2xl">
+          <div className=" w-full  px-10 py-10 mt-5 ">
             <h1 className="text-[30px] text-[#0054A3]   font-bold">
               Pahlawan Nasional
             </h1>
