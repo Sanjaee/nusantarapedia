@@ -26,12 +26,12 @@ const Main = () => {
       {/* Dekstop */}
       <div
         id="empatpilar"
-        className="mt-96 items-center flex-col justify-center lg:flex hidden"
+        className="mt-10 items-center flex-col justify-center lg:flex hidden"
       >
-        <h1 className="text-[20px] font-bold mb-10">Didukung oleh:</h1>
+        <h1 className="text-[20px] font-bold mb-4">Didukung oleh:</h1>
         <img src="./bgmain1.png" alt="" />
         {/* 1 */}
-        <div className="mt-10 flex items-center">
+        <div className="mt-32 flex items-center">
           <img className="w-[450px]" src="./bgmain2.png" alt="" />
           <div className="flex flex-col w-[570px] pl-20">
             <h1 className="text-[50px] font-bold text-[#0054A3]">Pancasila</h1>
@@ -137,7 +137,7 @@ const Main = () => {
           <SliderComponent />
         </div>
 
-        <div id="galeri" className="mt-52 text-center px-10 bg-[#E6F7FF]">
+        <div id="galeri" className="mt-52 text-center px-10 ">
           <h1 className="text-[50px] font-bold text-[#0054A3]">Galeri</h1>
           <div className="mt-10 grid grid-cols-3 gap-4 custom-1200:gap-6">
             {/* Galeri */}
