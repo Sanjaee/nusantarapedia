@@ -26,12 +26,12 @@ const Main = () => {
       {/* Dekstop */}
       <div
         id="empatpilar"
-        className="mt-10 items-center flex-col justify-center lg:flex hidden"
+        className="mt-20 items-center flex-col justify-center lg:flex hidden"
       >
         <h1 className="text-[20px] font-bold mb-4">Didukung oleh:</h1>
         <img src="./bgmain1.png" alt="" />
         {/* 1 */}
-        <div className="mt-32 flex items-center">
+        <div className="mt-36 flex items-center">
           <img className="w-[450px]" src="./bgmain2.png" alt="" />
           <div className="flex flex-col w-[570px] pl-20">
             <h1 className="text-[50px] font-bold text-[#0054A3]">Pancasila</h1>

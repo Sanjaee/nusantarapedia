@@ -6,7 +6,7 @@ const Header = () => {
       {/* Deksktop */}
       <div
         id="beranda"
-        className="pt-44 justify-center lg:flex hidden items-center"
+        className="pt-28 justify-center lg:flex hidden items-center"
       >
         <div className="w-full max-w-[1157px] flex justify-center items-center">
           <div>
