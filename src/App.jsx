@@ -76,15 +76,13 @@ import PulauSatu from "./pages/NkriEmpat/PulauSatu";
 import PulauDua from "./pages/NkriEmpat/PulauDua";
 import PulauTiga from "./pages/NkriEmpat/PulauTiga";
 import PulauEmpat from "./pages/NkriEmpat/PulauEmpat";
-import TestimoniComponent from "./backend/action/TestimoniComponent";
-import GaleryComponent from "./backend/action/GaleryComponent";
-import Login from "./backend/Login";
-import UpdateMitraComponent from "./backend/action/UpdateMitraComponent";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+       
+
         {/* Main Pages */}
         <Route path="/" element={<Home />} />
         <Route path="/pancasila" element={<Pancasila />} />
@@ -197,15 +195,9 @@ const App = () => {
 
         {/* NKRI 4 */}
         <Route path="/pulau-1" element={<PulauSatu />} />
-        <Route path="/pulau-2" element={<PulauDua/>} />
-        <Route path="/pulau-3" element={<PulauTiga/>} />
-        <Route path="/pulau-4" element={<PulauEmpat/>} />
-
-        {/* Backend */}
-        <Route path="/backend" element={<Login />} />
-        <Route path="/backend/galery" element={<GaleryComponent />} />
-        <Route path="/backend/testimoni" element={<TestimoniComponent />} />
-        <Route path="/backend/mitra" element={<UpdateMitraComponent />} />
+        <Route path="/pulau-2" element={<PulauDua />} />
+        <Route path="/pulau-3" element={<PulauTiga />} />
+        <Route path="/pulau-4" element={<PulauEmpat />} />
       </Routes>
     </BrowserRouter>
   );

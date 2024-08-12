@@ -106,14 +106,14 @@ const Navbar = () => {
             )}
             {location.pathname === "/" ? (
               <a href="#galeri" className="hover:text-blue-500 cursor-pointer">
-                Galery
+                Galeri
               </a>
             ) : (
               <Link
                 to="/#galeri"
                 className="hover:text-blue-500 cursor-pointer"
               >
-                Galery
+                Galeri
               </Link>
             )}
           </ul>

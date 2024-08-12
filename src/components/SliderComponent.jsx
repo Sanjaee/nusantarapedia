@@ -4,8 +4,6 @@ import axios from "axios";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const API_KEY = "G8XcZJLaeJTx0jQq";
-axios.defaults.headers.common["API_KEY"] = API_KEY;
 
 const settings = {
   infinite: true,
@@ -35,7 +33,7 @@ const SliderComponent = () => {
   useEffect(() => {
     const fetchSliderData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/testimoni");
+        const response = await axios.get("http://127.0.0.1:8000/api/testimoni");
         setSliderData(response.data);
         console.log(response.data);
       } catch (error) {
@@ -60,7 +58,7 @@ const SliderComponent = () => {
                 <div className="flex items-start">
                   <img
                     className="rounded-full w-[75px] h-[75px] object-cover"
-                    src={slide.img_url}
+                    src={slide.image_url}
                     alt=""
                   />
                   <div className=" w-[200px] ml-6 text-start text-[#696969]">
@@ -92,7 +90,7 @@ const SliderComponent = () => {
                 <div className="flex items-start">
                   <img
                     className="rounded-full w-[55px] h-[55px] object-cover"
-                    src={slide.img_url}
+                    src={slide.image_url}
                     alt=""
                   />
                   <div className=" w-[140px] ml-5 text-start text-[#696969]">

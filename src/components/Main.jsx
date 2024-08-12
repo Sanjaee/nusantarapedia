@@ -5,14 +5,12 @@ import SliderComponent from "./SliderComponent";
 import SliderMitra from "./SliderMitra";
 import axios from "axios";
 
-const API_KEY = "G8XcZJLaeJTx0jQq";
-axios.defaults.headers.common["API_KEY"] = API_KEY;
 const Main = () => {
   const [galleryItems, setGalleryItems] = useState([]);
   useEffect(() => {
     const fetchGalleryData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/galery");
+        const response = await axios.get("http://127.0.0.1:8000/api/galeri");
         setGalleryItems(response.data);
       } catch (error) {
         console.error("Error fetching gallery data:", error);
@@ -162,14 +160,14 @@ const Main = () => {
       {/* Mobile */}
       <div
         id="main1"
-        className="mt-40  items-center flex-col justify-center lg:hidden flex"
+        className="mt-5  items-center flex-col justify-center lg:hidden flex"
       >
         <div className="flex flex-col items-center px-5">
           <h1 className="text-sm font-semibold mb-5">Didukung oleh:</h1>
           <img className="w-52" src="./bgmain1.png" alt="" />
         </div>
         {/* 1 */}
-        <div className="mt-20 flex flex-col items-center px-5">
+        <div className="mt-36 flex flex-col items-center px-5">
           <img className="w-56" src="./bgmain2.png" alt="" />
           <div className="flex flex-col w-full mt-5">
             <h1 className="text-[30px] font-bold text-[#0054A3]">Pancasila</h1>

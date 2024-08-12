@@ -4,8 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 
-const API_KEY = "G8XcZJLaeJTx0jQq";
-axios.defaults.headers.common["API_KEY"] = API_KEY;
+
 
 const settings = {
   infinite: true,
@@ -33,7 +32,7 @@ const SliderMitra = () => {
   useEffect(() => {
     const fetchSliderData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/mitra");
+        const response = await axios.get("http://127.0.0.1:8000/api/mitra");
         setSliderData(response.data);
       } catch (error) {
         console.error("Error fetching slider data:", error);
@@ -55,7 +54,7 @@ const SliderMitra = () => {
               <div className="flex items-center justify-center w-full h-full">
                 <img
                   className="object-contain h-full"
-                  src={slide.img_url}
+                  src={slide.image_url}
                   alt={`Slide ${slide.id}`}
                   loading="lazy"
                 />
@@ -76,7 +75,7 @@ const SliderMitra = () => {
               <div className="flex items-center justify-center w-full h-full">
                 <img
                   className="object-contain h-full"
-                  src={slide.img_url}
+                  src={slide.image_url}
                   alt={`Slide ${slide.id}`}
                   loading="lazy"
                 />
